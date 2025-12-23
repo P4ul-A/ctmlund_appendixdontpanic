@@ -7,6 +7,18 @@ website:
     left:
       - href: index.qmd
         text: Home
+      - href: appendix_d1.qmd
+        text: D.1 Introduction
+      - href: appendix_d2.qmd
+        text: D.2 Sequences and Sums
+      - href: appendix_d3.qmd
+        text: D.3 Control Statements
+      - href: appendix_d4.qmd
+        text: D.4 Functions
+      - href: appendix_d5.qmd
+        text: D.5 Number Representation
+      - href: appendix_d6.qmd
+        text: D.6 Answers
       - about.qmd
 
 format:
@@ -16,6 +28,4 @@ format:
       - brand
     css: styles.css
     toc: true
-
-
 

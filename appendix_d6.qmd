@@ -1,0 +1,211 @@
+---
+title: "Appendix D.6 Answers"
+format: html
+filters:
+  - pyodide
+---
+
+Appendix D: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## D.6 Answers to selected exercises
+
+### D.4
+
+- (a) addition
+- (b) subtraction
+- (c) multiplication
+- (d) power
+- (e) division
+- (f) floor division (division rounded down)
+- (g) modulo (remainder)
+
+### D.8
+
+Codes (a), (d), and (f) will not run.
+
+### D.9
+
+- (a) $1 + 1/2 + 1/4 + 1/8 + 1/16$
+- (b) $1/(1 + 1/(1 + 1/(1 + 1/(1 + 1))))$
+
+### D.11
+
+The code in (a) will run.
+
+### D.36
+
+The code computes the partial sum $S_{99999}$ of the harmonic series. The speed of
+the computations will depend on your processor.
+
+### D.40
+
+Here is one solution:
+
+```{pyodide-python}
+#| read-only: false
+total = 0
+k = 0
+while abs(total - 2) >= 1 / 10000:
+    total = total + 1 / 2**k
+    k = k + 1  # In a while-loop, we must update k manually.
+
+print(k - 1)
+```
+
+### D.46
+
+**(a)** Using a for-loop and break:
+
+```{pyodide-python}
+#| read-only: false
+my_list = [n / (1 + n**2) for n in range(0, 10**6)]
+k = 0
+for x in my_list:
+    if x < 1e-4:
+        break
+    k = k + 1
+
+print(k)
+```
+
+**(b)** Using a while-loop:
+
+```{pyodide-python}
+#| read-only: false
+my_list = [n / (1 + n**2) for n in range(0, 10**6)]
+k = 0
+while my_list[k] > 1e-4:
+    k = k + 1
+
+print(k)
+```
+
+### D.48
+
+```{pyodide-python}
+#| read-only: false
+def absolute1(x):
+    if x >= 0:
+        return x
+    return -x
+
+def absolute2(x):
+    return (x**2) ** 0.5
+```
+
+### D.49
+
+```{pyodide-python}
+#| read-only: false
+def product(x):
+    temp_prod = 1
+    for a in x:
+        temp_prod = temp_prod * a
+    return temp_prod
+```
+
+### D.54
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+# Insert code for absolute1
+
+X = [k / 10 for k in range(-20, 21)]
+Y = [absolute1(x) for x in X]
+plt.plot(X, Y)
+plt.show()
+```
+
+### D.58
+
+`absolute1` does not work for numpy arrays because the if-statement does not make
+sense for arrays. For `absolute2`, the following code works:
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Insert code for absolute2
+
+X = np.linspace(-2, 2, 40)
+Y = absolute2(X)
+plt.plot(X, Y)
+plt.show()
+```
+
+### D.63
+
+Python crashes with a `ZeroDivisionError`. In other words, Python really believes
+that $S_{100} = 2$.
+
+### D.66
+
+The first 21 numbers in both binary and decimal notation:
+
+| Decimal | Binary |
+|--------:|:------|
+| 0 | 0 |
+| 1 | 1 |
+| 2 | 10 |
+| 3 | 11 |
+| 4 | 100 |
+| 5 | 101 |
+| 6 | 110 |
+| 7 | 111 |
+| 8 | 1000 |
+| 9 | 1001 |
+| 10 | 1010 |
+| 11 | 1011 |
+| 12 | 1100 |
+| 13 | 1101 |
+| 14 | 1110 |
+| 15 | 1111 |
+| 16 | 10000 |
+| 17 | 10001 |
+| 18 | 10010 |
+| 19 | 10011 |
+| 20 | 10100 |
+
+### D.68
+
+- (a) $2^7 - 1 = 127$
+- (b) $2^{63} - 1$
+
+### D.72
+
+- (a) Roughly $10^{-16}$
+- (b) Roughly $10^{-340}$
+
+### D.73
+
+According to the sloppy description, $a + b$ is stored as
+$3256600000000325 \cdot 10^{17}$. When printing `100*(a+b)`, `1000*(a+b)` and
+`10000*(a+b)`, the 17th digit keeps changing due to round-off errors.
+
+### D.74
+
+- (a) $N = 53$
+- (b) $N = 1075$
+
+### D.76
+
+- (a) $(10101)_2 = 21$
+- (b) $(1010.1)_2 = 10.5$
+- (c) $(10.101)_2 = 2.625$
+
+### D.79
+
+The exponent $\alpha$ is between $-1024$ and $1023$ (counting two's complement). This
+means that $2^\alpha$ is between $10^{-308}$ and $10^{308}$, roughly. Taking into
+account that $\epsilon$ is between $1$ and $10^{16}$, and that $(1.\epsilon)_2$ is
+replaced by $(0.\epsilon)_2$ when $\alpha = -1024$, we obtain the rough description.
+
+### D.80
+
+Exactly the fractions $a / 2^n$, where $a$ is an integer and $n$ is a natural number.
+These are the numbers with finite binary expansions.

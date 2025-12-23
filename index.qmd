@@ -1,7 +1,12 @@
 ---
-title: "ConvertingAppendix"
+title: "ExerciseTest"
 ---
 
-This is a Quarto website.
+## Appendix
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+- [D.1 Introduction](appendix_d1.qmd)
+- [D.2 Sequences and Sums](appendix_d2.qmd)
+- [D.3 Control Statements](appendix_d3.qmd)
+- [D.4 Functions](appendix_d4.qmd)
+- [D.5 Number Representation](appendix_d5.qmd)
+- [D.6 Answers](appendix_d6.qmd)
