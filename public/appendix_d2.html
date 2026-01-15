@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.1 Introduction – ConvertingAppendix</title>
+<title>Appendix D.2 Sequences and Sums – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -265,7 +230,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"print(\"Hello world\")\nprint(\"2+2=\", 2 + 2)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\nprint(\"a+b=\", c)","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\na = 10\nprint(\"a+b=\", c)","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 7\nb = 3\n\nprint(\"a + b =\", a + b)\nprint(\"a * b =\", a * b)\nprint(\"a - b =\", a - b)\nprint(\"a - -b =\", a - -b)\nprint(\"a / b =\", a / b)\nprint(\"a // b =\", a // b)\nprint(\"a % b =\", a % b)","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ponies = 2\ncookies = 4\npony_Cookie32 = ponies + cookies\nprint(pony_Cookie32)","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2; b = 4  # Two commands on the same line.\nc = (a + b) - 3  # Here we use soft parentheses.\n\nprint(c)","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\n6 = a + b\nprint(a + b)","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\na = a + b\nprint(a)","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\na = b\nprint(b)","id":9,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\nprint(c)","id":10,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2; b = 4; a = a + b\n\nprint(b)","id":11,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"Ponies = 2\nCookies = 4\nRainbows = ponies + cookies\nprint(rainbows)","id":12,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 1\na = a + 1/2\na = a + 1/4\na = a + 1/8\na = a + 1/16\n\nprint(a)","id":13,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 1\na = 1/(1 + a)\na = 1/(1 + a)\na = 1/(1 + a)\na = 1/(1 + a)\n\nprint(a)","id":14,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 0\nprint(a)\na = 1\nprint(a)\na = 2\nprint(a)\na = 3\nprint(a)\nprint(\"the end!\")","id":15,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    a = n\n    print(a)\nprint(\"the end!\")","id":16,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    print(n)\nprint(\"mississippi\")\nprint(\"hello\")","id":17,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    print(n)\n    print(\"mississippi\")\nprint(\"hello\")","id":18,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# (a) Rebuild the sum 1 + 1/2 + 1/4 + 1/8 + 1/16 using a for-loop.\na = 1\n\n# TODO: update a inside a for-loop\n\nprint(\"Result for (a):\", a)","id":19,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# (b) Rebuild the repeated fraction using a for-loop.\na = 1\n\n# TODO: update a inside a for-loop\n\nprint(\"Result for (b):\", a)","id":20,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2  # Here we store the value 2 as an integer.\nprint(type(a))  # Prints: <class 'int'>","id":21,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"b = 3/2\nc = 4/2\n\nprint(\"type(b) =\", type(b))\nprint(\"type(c) =\", type(c))","id":22,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [0, 1, 2, 3, 4, 5]  # list of integers\nb = [\"cheese\", 88]  # list of a string and an ice cream\n\nprint(a)       # prints the entire list\nprint(a[0])    # prints 1st entry\nprint(a[3])    # prints 4th entry\nprint(a[-1])   # prints last entry\nprint(a[-2])   # prints second to last entry\n\nprint(\"len(a) =\", len(a))  # length of the list\nprint(\"sum(a) =\", sum(a))  # sum of entries\nprint(\"max(a) =\", max(a))  # largest entry\nprint(\"min(a) =\", min(a))  # smallest entry\n\na.append(\"oi\")  # add entry \"oi\" to the end of the list\na.pop(3)  # delete the 4th entry in the list\n\nc = a + b  # concatenation\nd = b * 2  # repetition\n\ne = a[2:5]    # slice: entries 2, 3, 4\nf = a[2:]     # slice from index 2 to the end\ng = a[:5]     # slice from start to index 4\nh = a[1:4:2]  # every second entry between indices 1 and 3\n\nprint(\"c =\", c)\nprint(\"d =\", d)\nprint(\"e =\", e)\nprint(\"f =\", f)\nprint(\"g =\", g)\nprint(\"h =\", h)","id":23,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"print(1 / 2**0)\nprint(1 / 2**1)\nprint(1 / 2**2)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for k in range(0, 3):\n    print(1 / 2**k)","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [1 / 2**0, 1 / 2**1, 1 / 2**2]\nprint(a)","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [1 / 2**k for k in range(0, 3)]\nprint(a)","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 0\nfor k in range(0, 3):\n    a = 1 / 2**k\n\n# TODO: print something useful here.","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = []\nfor k in range(0, 3):\n    a.append(1 / 2**k)\n\n# TODO: print something useful here.","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 0\na = a + 1 / 2**0\na = a + 1 / 2**1\na = a + 1 / 2**2","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 0\nfor k in range(0, 3):\n    a = a + 1 / 2**k","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [1 / 2**0, 1 / 2**1, 1 / 2**2]\nb = sum(a)","id":9,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [1 / 2**k for k in range(0, 3)]\nb = sum(a)","id":10,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"b = sum([1 / 2**k for k in range(0, 3)])","id":11,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# TODO: compute a partial sum for a large N and print the result.\nN = 10**6\ns = 0.0\nfor k in range(0, N):\n    s += 1 / 2**k\n\n# TODO: print the result.","id":12,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\n\nfor k in range(0, 10):\n    plt.plot(k, 1 / 2**k, \"bo\")\n\nplt.show()","id":13,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\n\na = 0\nfor k in range(0, 3):\n    a = a + 1 / 2**k\n    plt.plot(k, a, \"bo\")\n\nplt.show()","id":14,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\n\nn_values = [n for n in range(0, 10)]\na = [1 / 2**n for n in n_values]\n\nplt.plot(n_values, a, \"bo\")\nplt.show()","id":15,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import matplotlib.pyplot as plt\n\nindices = [i for i in range(0, 20)]\na = [1 / 2**k for k in indices]\nS = [sum(a[0:n + 1]) for n in indices]\n\nplt.plot(indices, S, \"bo\")\nplt.show()","id":16,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [1, 1]\n\nfor n in range(2, 20):\n    new_term = a[n - 1] + a[n - 2]\n    a.append(new_term)\n\nfor n in range(0, 20):\n    print(\"The\", n + 1, \"th Fibonacci number is\", a[n])","id":17,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# TODO: build a list of partial sums for 1/2**k.","id":18,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"import time\n\ntime_start = time.process_time()\n\n# Your code here\n\ntime_elapsed = time.process_time() - time_start\nprint(time_elapsed)","id":19,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"S = 0\nfor n in range(1, 100000):\n    S = S + 1 / n\n\nprint(S)","id":20,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -456,6 +421,35 @@ globalThis._qpyodideGetInstance = function() {
 
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -482,11 +476,11 @@ globalThis._qpyodideGetInstance = function() {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./appendix_d1.html" aria-current="page"> 
+    <a class="nav-link" href="./appendix_d1.html"> 
 <span class="menu-text">D.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendix_d2.html"> 
+    <a class="nav-link active" href="./appendix_d2.html" aria-current="page"> 
 <span class="menu-text">D.2 Sequences and Sums</span></a>
   </li>  
   <li class="nav-item">
@@ -525,22 +519,25 @@ globalThis._qpyodideGetInstance = function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.1-introduction" id="toc-d.1-introduction" class="nav-link active" data-scroll-target="#d.1-introduction">D.1 Introduction</a>
+  <li><a href="#d.2-how-to-compute-and-visualize-sequences-and-sums" id="toc-d.2-how-to-compute-and-visualize-sequences-and-sums" class="nav-link active" data-scroll-target="#d.2-how-to-compute-and-visualize-sequences-and-sums">D.2 How to compute and visualize sequences and sums</a>
   <ul class="collapse">
-  <li><a href="#how-to-install-python-3-and-write-your-first-program" id="toc-how-to-install-python-3-and-write-your-first-program" class="nav-link" data-scroll-target="#how-to-install-python-3-and-write-your-first-program">How to install Python 3 and write your first program</a></li>
-  <li><a href="#exercise-d.1" id="toc-exercise-d.1" class="nav-link" data-scroll-target="#exercise-d.1">Exercise D.1</a></li>
-  <li><a href="#a-first-look-at-basic-syntax-for-arithmetic-in-python" id="toc-a-first-look-at-basic-syntax-for-arithmetic-in-python" class="nav-link" data-scroll-target="#a-first-look-at-basic-syntax-for-arithmetic-in-python">A first look at basic syntax for arithmetic in Python</a></li>
-  <li><a href="#exercise-d.4" id="toc-exercise-d.4" class="nav-link" data-scroll-target="#exercise-d.4">Exercise D.4</a></li>
-  <li><a href="#basic-rules-for-variable-names" id="toc-basic-rules-for-variable-names" class="nav-link" data-scroll-target="#basic-rules-for-variable-names">Basic rules for variable names</a></li>
-  <li><a href="#indentation-line-breaks-and-comments" id="toc-indentation-line-breaks-and-comments" class="nav-link" data-scroll-target="#indentation-line-breaks-and-comments">Indentation, line breaks, and comments</a></li>
-  <li><a href="#exercise-d.8" id="toc-exercise-d.8" class="nav-link" data-scroll-target="#exercise-d.8">Exercise D.8</a></li>
-  <li><a href="#exercise-d.9" id="toc-exercise-d.9" class="nav-link" data-scroll-target="#exercise-d.9">Exercise D.9</a></li>
-  <li><a href="#a-first-look-at-how-to-efficiently-repeat-commands-in-python" id="toc-a-first-look-at-how-to-efficiently-repeat-commands-in-python" class="nav-link" data-scroll-target="#a-first-look-at-how-to-efficiently-repeat-commands-in-python">A first look at how to efficiently repeat commands in Python</a></li>
-  <li><a href="#exercise-d.11" id="toc-exercise-d.11" class="nav-link" data-scroll-target="#exercise-d.11">Exercise D.11</a></li>
-  <li><a href="#exercise-d.12" id="toc-exercise-d.12" class="nav-link" data-scroll-target="#exercise-d.12">Exercise D.12</a></li>
-  <li><a href="#some-words-on-datatypes-in-python" id="toc-some-words-on-datatypes-in-python" class="nav-link" data-scroll-target="#some-words-on-datatypes-in-python">Some words on datatypes in Python</a></li>
-  <li><a href="#exercise-d.14" id="toc-exercise-d.14" class="nav-link" data-scroll-target="#exercise-d.14">Exercise D.14</a></li>
-  <li><a href="#how-to-store-and-manipulate-sequences-using-python-lists" id="toc-how-to-store-and-manipulate-sequences-using-python-lists" class="nav-link" data-scroll-target="#how-to-store-and-manipulate-sequences-using-python-lists">How to store and manipulate sequences using Python lists</a></li>
+  <li><a href="#some-ways-to-compute-sequences-in-python" id="toc-some-ways-to-compute-sequences-in-python" class="nav-link" data-scroll-target="#some-ways-to-compute-sequences-in-python">Some ways to compute sequences in Python</a></li>
+  <li><a href="#exercise-d.19" id="toc-exercise-d.19" class="nav-link" data-scroll-target="#exercise-d.19">Exercise D.19</a></li>
+  <li><a href="#exercise-d.20" id="toc-exercise-d.20" class="nav-link" data-scroll-target="#exercise-d.20">Exercise D.20</a></li>
+  <li><a href="#some-ways-to-compute-partial-sums-of-infinite-series" id="toc-some-ways-to-compute-partial-sums-of-infinite-series" class="nav-link" data-scroll-target="#some-ways-to-compute-partial-sums-of-infinite-series">Some ways to compute partial sums of infinite series</a></li>
+  <li><a href="#exercise-d.23" id="toc-exercise-d.23" class="nav-link" data-scroll-target="#exercise-d.23">Exercise D.23</a></li>
+  <li><a href="#how-to-visualize-sequences-and-partial-sums-using-for-loops" id="toc-how-to-visualize-sequences-and-partial-sums-using-for-loops" class="nav-link" data-scroll-target="#how-to-visualize-sequences-and-partial-sums-using-for-loops">How to visualize sequences and partial sums using for-loops</a></li>
+  <li><a href="#exercise-d.26" id="toc-exercise-d.26" class="nav-link" data-scroll-target="#exercise-d.26">Exercise D.26</a></li>
+  <li><a href="#exercise-d.27" id="toc-exercise-d.27" class="nav-link" data-scroll-target="#exercise-d.27">Exercise D.27</a></li>
+  <li><a href="#visualizing-sequences-and-partial-sums-stored-as-lists" id="toc-visualizing-sequences-and-partial-sums-stored-as-lists" class="nav-link" data-scroll-target="#visualizing-sequences-and-partial-sums-stored-as-lists">Visualizing sequences and partial sums stored as lists</a></li>
+  <li><a href="#exercise-d.30" id="toc-exercise-d.30" class="nav-link" data-scroll-target="#exercise-d.30">Exercise D.30</a></li>
+  <li><a href="#a-slightly-more-advanced-example-the-fibonacci-sequence" id="toc-a-slightly-more-advanced-example-the-fibonacci-sequence" class="nav-link" data-scroll-target="#a-slightly-more-advanced-example-the-fibonacci-sequence">A slightly more advanced example: the Fibonacci sequence</a></li>
+  <li><a href="#exercise-d.32" id="toc-exercise-d.32" class="nav-link" data-scroll-target="#exercise-d.32">Exercise D.32</a></li>
+  <li><a href="#exercise-d.33" id="toc-exercise-d.33" class="nav-link" data-scroll-target="#exercise-d.33">Exercise D.33</a></li>
+  <li><a href="#remark-d.34-for-loops-versus-list-comprehensions" id="toc-remark-d.34-for-loops-versus-list-comprehensions" class="nav-link" data-scroll-target="#remark-d.34-for-loops-versus-list-comprehensions">Remark D.34 (for-loops versus list comprehensions)</a></li>
+  <li><a href="#remark-d.35-how-to-time-a-computation" id="toc-remark-d.35-how-to-time-a-computation" class="nav-link" data-scroll-target="#remark-d.35-how-to-time-a-computation">Remark D.35 (how to time a computation)</a></li>
+  <li><a href="#exercise-d.36" id="toc-exercise-d.36" class="nav-link" data-scroll-target="#exercise-d.36">Exercise D.36</a></li>
+  <li><a href="#remark-d.37" id="toc-remark-d.37" class="nav-link" data-scroll-target="#remark-d.37">Remark D.37</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -560,7 +557,7 @@ globalThis._qpyodideGetInstance = function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.1 Introduction</h1>
+<h1 class="title">Appendix D.2 Sequences and Sums</h1>
 </div>
 
 
@@ -580,221 +577,170 @@ globalThis._qpyodideGetInstance = function() {
 <p>Appendix D: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.1-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="d.1-introduction">D.1 Introduction</h2>
-<section id="how-to-install-python-3-and-write-your-first-program" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-install-python-3-and-write-your-first-program">How to install Python 3 and write your first program</h3>
-<p>Go to <a href="https://www.spyder-ide.org" class="uri">https://www.spyder-ide.org</a> and download and install the latest version of Spyder.<br>
-Once installed, launch the program.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Figure omitted in this web version.</p>
-</div>
-</div>
-</section>
-<section id="exercise-d.1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.1">Exercise D.1</h3>
-<p>Type <code>print("Hello world")</code> in the editor window and press the green play button.<br>
-What output do you get? Also try <code>print("2+2=", 2+2)</code>.</p>
+<section id="d.2-how-to-compute-and-visualize-sequences-and-sums" class="level2">
+<h2 class="anchored" data-anchor-id="d.2-how-to-compute-and-visualize-sequences-and-sums">D.2 How to compute and visualize sequences and sums</h2>
+<section id="some-ways-to-compute-sequences-in-python" class="level3">
+<h3 class="anchored" data-anchor-id="some-ways-to-compute-sequences-in-python">Some ways to compute sequences in Python</h3>
+<p>Suppose we want to compute many entries of the sequence <span class="math display">\[\left(\frac{1}{2^k}\right)_{k=0}^\infty = \left(1, \frac{1}{2}, \frac{1}{4}, \dots \right).\]</span></p>
+<p><strong>Example D.17 (Computing sequences using a for-loop)</strong><br>
+The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>Remark.</strong> Python treats <code>"2+2"</code> as text to be printed, and <code>2+2</code> as something to be computed. A comma is used to separate different types of input to <code>print</code>.</p>
-</div>
-</div>
-</section>
-<section id="a-first-look-at-basic-syntax-for-arithmetic-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="a-first-look-at-basic-syntax-for-arithmetic-in-python">A first look at basic syntax for arithmetic in Python</h3>
-<p>We now consider how to do basic arithmetic in Python.</p>
-<p><strong>Example D.2</strong> Enter the following code into the Spyder editor.</p>
 <div id="qpyodide-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>When you press the green play button you get the output <code>a+b=6</code>.</p>
-<p>Here, <code>a</code>, <code>b</code>, and <code>c</code> are variables. Technically speaking, a variable is a space in the memory of the computer which can store one piece of information, such as a number.</p>
-<p><strong>Example D.3</strong> Enter the following code into the Spyder editor.</p>
+<p>Another way of computing lists is to use a list comprehension. It has the benefit of both computing and storing a sequence of numbers in a single line of code.</p>
+<p><strong>Example D.18 (Computing sequences using a list)</strong><br>
+The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>When you press the green play button you still get the output <code>a+b=6</code>.</p>
-<p>Line-by-line explanation of Example D.2:</p>
-<ol type="1">
-<li>Python creates a variable <code>a</code> and assigns it the value <code>2</code>.</li>
-<li>Python creates a variable <code>b</code> and assigns it the value <code>4</code>.</li>
-<li>Python creates a variable <code>c</code>, computes <code>a + b</code>, and assigns this value to <code>c</code>.</li>
-<li>Python prints the value of <code>c</code> on the screen (together with the string <code>"a+b="</code>).</li>
-</ol>
-<p>The above example illustrates several peculiarities of arithmetic in Python and how a code is run:</p>
-<ol type="1">
-<li>The code is executed line by line.</li>
-<li>Expressions such as <code>a = b</code> should be read from right to left. That is, <code>a</code> is assigned whatever value <code>b</code> has, but not vice versa.</li>
-<li>If a variable gets assigned some value, it has no memory of how that happened. Changing <code>a</code> later does not affect the value stored in <code>c</code>.</li>
-</ol>
-</section>
-<section id="exercise-d.4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.4">Exercise D.4</h3>
-<p>Explore the various ways to do arithmetic operations in Python by running the following commands for suitable values of <code>a</code> and <code>b</code>:</p>
-<p><code>a + b</code>, <code>a * b</code>, <code>a - b</code>, <code>a - -b</code>, <code>a / b</code>, <code>a // b</code>, <code>a % b</code>.</p>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="basic-rules-for-variable-names" class="level3">
-<h3 class="anchored" data-anchor-id="basic-rules-for-variable-names">Basic rules for variable names</h3>
-<p>We now turn to a discussion of the basic syntax in Python. First, the types of names you are allowed to give a variable.</p>
-<p><strong>Example D.5</strong> You can give variables much more interesting names than just <code>a</code>, <code>b</code>, <code>x</code>, or <code>y</code>. Here is an example:</p>
+<section id="exercise-d.19" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.19">Exercise D.19</h3>
+<p>Run and compare the output of the codes in the above examples.</p>
+</section>
+<section id="exercise-d.20" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.20">Exercise D.20</h3>
+<p>A difference between the right-most codes in Examples D.17 and D.18 is that in the first, we do not store the values of the sequence anywhere. Here are two suggestions for how to fix this:</p>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We make the following remarks:</p>
-<ol start="4" type="1">
-<li>Python is case sensitive. This means that <code>n</code> and <code>N</code> are as different as <code>n</code> and <code>m</code>.</li>
-<li>By tradition, the name of a variable should never start with an upper case letter.</li>
-<li>A variable cannot be given a numerical name such as <code>2</code> or <code>34</code>. Numbers can be part of the name of a variable, as long as the name starts with a letter or an underscore <code>_</code>. Certain special symbols, such as <code>$</code>, <code>#</code>, and <code>%</code>, can never be used in the name of a variable.</li>
-<li>The name of a variable cannot contain a space.</li>
-<li>You should not give a variable a name that already means something different. For instance, do not give a variable the name <code>print</code> (however, <code>Print</code> is fine).</li>
-</ol>
-</section>
-<section id="indentation-line-breaks-and-comments" class="level3">
-<h3 class="anchored" data-anchor-id="indentation-line-breaks-and-comments">Indentation, line breaks, and comments</h3>
-<p><strong>Example D.6</strong> In Python, we need to be careful with how we place indentations. For instance, both of the following programs will crash:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="9" type="1">
-<li>Python is careful with indentation. If Python does not understand why we make some indentation, it will crash.</li>
-<li>Later in this chapter, we will see situations where indentations become a natural part of the code (for loops, while loops, if-else structures, and functions).</li>
-</ol>
-<p><strong>Example D.7</strong> In contrast to the situation with indentations, Python is much less sensitive with respect to whether or not we skip a line. The following code runs just fine:</p>
 <div id="qpyodide-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ol start="11" type="1">
-<li><p>Python does not care if you skip a line, or twenty.</p></li>
-<li><p>You can place multiple commands on the same line, as long as they are separated by a semicolon <code>;</code>.</p></li>
-<li><p>Everything you write on a line following a hashtag <code>#</code> is ignored by Python.</p></li>
-<li><p>You can use “soft” parentheses <code>(</code> and <code>)</code> just as you would in a normal computation. You cannot replace them with <code>[</code> <code>]</code> or <code>{</code> <code>}</code>.</p></li>
-<li><p>It is a good thing for a program to crash. It is a way for Python to let you know that the result would probably have been false because the code was written in a bad way.</p></li>
-</ol>
+<p>Explain what is going on in each code. What information is stored at the end of each program? Also, why do these not give any output? Can you fix this?</p>
 </section>
-<section id="exercise-d.8" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.8">Exercise D.8</h3>
-<p>Will the following codes run? If not, why? If yes, what is the output?</p>
-<p><strong>(a)</strong></p>
+<section id="some-ways-to-compute-partial-sums-of-infinite-series" class="level3">
+<h3 class="anchored" data-anchor-id="some-ways-to-compute-partial-sums-of-infinite-series">Some ways to compute partial sums of infinite series</h3>
+<p>On the previous page, we discussed how to compute and store values of a sequence. Let us now consider how to compute the sum of the first, say, million terms of the infinite series <span class="math display">\[\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.\]</span></p>
+<p><strong>Example D.21 (Computing sums using a for-loop)</strong><br>
+The following two codes both compute the sum <span class="math inline">\(1 + 1/2 + 1/4 + 1/8\)</span>.</p>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
 <div id="qpyodide-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(c)</strong></p>
+<p><strong>Example D.22 (Computing a sum using lists)</strong><br>
+The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(d)</strong></p>
 <div id="qpyodide-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(e)</strong></p>
+<p>Using this technique, we can compute the sum in just one line:</p>
 <div id="qpyodide-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(f)</strong></p>
+</section>
+<section id="exercise-d.23" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.23">Exercise D.23</h3>
+<ol type="1">
+<li>Run the codes from the examples on this page. Why do they not give any output? Fix this.</li>
+<li>Modify the code so that you can compute the sum of the first million terms or so. What result do you get?</li>
+</ol>
 <div id="qpyodide-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="exercise-d.9" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.9">Exercise D.9</h3>
-<p>Consider the following codes. Can you express mathematically what they compute?</p>
-<p><strong>(a)</strong></p>
+<section id="how-to-visualize-sequences-and-partial-sums-using-for-loops" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-visualize-sequences-and-partial-sums-using-for-loops">How to visualize sequences and partial sums using for-loops</h3>
+<p><strong>Example D.24</strong><br>
+The following code is perhaps the simplest way to visualize a sequence in Python. Here, we visualize the sequence <span class="math inline">\((1/2^k)_{k=0}^9\)</span>.</p>
 <div id="qpyodide-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
+<p>Explanation:</p>
+<ul>
+<li><code>matplotlib.pyplot</code> provides plotting commands.</li>
+<li>The <code>for</code> loop plots a blue dot at <span class="math inline">\((k, 1/2^k)\)</span> for each <code>k</code>.</li>
+<li><code>plt.show()</code> displays the figure.</li>
+</ul>
+<p>Now modify the code so that we plot partial sums of the infinite series <span class="math display">\[\sum_{k=0}^\infty \frac{1}{2^k}.\]</span></p>
+<p><strong>Example D.25</strong><br>
+The following code computes and visualizes the partial sums.</p>
 <div id="qpyodide-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Hint: You have already seen these objects on page 87.</p>
 </section>
-<section id="a-first-look-at-how-to-efficiently-repeat-commands-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="a-first-look-at-how-to-efficiently-repeat-commands-in-python">A first look at how to efficiently repeat commands in Python</h3>
-<p>In Exercise D.9 above, you were asked to consider a code where an operation was repeated multiple times. We now explain one way this can be done using a <code>for</code> loop.</p>
-<p><strong>Example D.10 (For-loop)</strong> The following two codes do exactly the same thing when run.</p>
+<section id="exercise-d.26" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.26">Exercise D.26</h3>
+<p>Run this code, and verify by computing the first three partial sums by hand that the plot is correct. What happens when you increase <code>range(0, 3)</code> to, say, <code>range(0, 100)</code>?</p>
+</section>
+<section id="exercise-d.27" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.27">Exercise D.27</h3>
+<p>Several commands can be used to change how the above figure looks. Try inserting the following into the code anywhere after the <code>import</code> and before <code>plt.plot</code>. What happens?</p>
+<ul>
+<li>Replace <code>"bo"</code> by <code>"rx"</code>.</li>
+<li><code>plt.xlim(-3, 15)</code></li>
+<li><code>plt.ylim(-5, 2)</code></li>
+<li><code>plt.xlabel("There was")</code></li>
+<li><code>plt.ylabel("a graph")</code></li>
+<li><code>plt.title("that had a title")</code></li>
+<li><code>plt.xticks([-2, 0, 3, 4, 6.5, 10])</code></li>
+<li><code>plt.yticks([0, 1, 1.5])</code></li>
+<li><code>plt.grid(True)</code></li>
+<li><code>plt.figure(figsize=(4, 3))</code></li>
+<li><code>plt.savefig("myfigure.jpg")</code></li>
+</ul>
+<p>Remark: Note that by choosing the extension <code>.jpg</code>, you tell Python to save your figure as a jpg file. Only a limited number of file formats are supported.</p>
+</section>
+<section id="visualizing-sequences-and-partial-sums-stored-as-lists" class="level3">
+<h3 class="anchored" data-anchor-id="visualizing-sequences-and-partial-sums-stored-as-lists">Visualizing sequences and partial sums stored as lists</h3>
+<p><strong>Example D.28</strong><br>
+We now use lists to create and plot the sequence <span class="math inline">\((1/2^n)_{n=0}^9\)</span>.</p>
 <div id="qpyodide-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Explanation:</p>
+<ul>
+<li><code>n_values</code> gives the x-axis values.</li>
+<li><code>a</code> stores the sequence values.</li>
+<li><code>plt.plot(n_values, a, "bo")</code> plots the points.</li>
+</ul>
+<p><strong>Example D.29</strong><br>
+We now use lists to compute and plot partial sums of <span class="math display">\[\sum_{k=0}^\infty \frac{1}{2^k}.\]</span></p>
 <div id="qpyodide-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Explanation of the <code>for</code> loop:</p>
-<ol type="1">
-<li><code>for n in range(0, 4)</code> means the block below is repeated for each <code>n</code> between <code>0</code> and <code>3</code> (but not <code>4</code>).</li>
-<li>The indented lines are run by the loop. The loop first runs with <code>n = 0</code>, then <code>n = 1</code>, and so on until <code>n = 3</code>.</li>
-<li>After the loop ends, Python moves on to the first unindented line following it.</li>
-</ol>
+<p>The key line is the list comprehension: <code>S = [sum(a[0:n + 1]) for n in indices]</code>. Remember that <code>a[0:n + 1]</code> contains the entries <code>a[0], a[1], ..., a[n]</code>.</p>
 </section>
-<section id="exercise-d.11" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.11">Exercise D.11</h3>
-<p>Will these codes run? If so, what are their outputs?</p>
-<p><strong>(a)</strong></p>
+<section id="exercise-d.30" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.30">Exercise D.30</h3>
+<p>Implement the code in Example D.29. Verify that it gives the same output as Example D.25 when the range in the latter example is suitably adjusted.</p>
+</section>
+<section id="a-slightly-more-advanced-example-the-fibonacci-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="a-slightly-more-advanced-example-the-fibonacci-sequence">A slightly more advanced example: the Fibonacci sequence</h3>
+<p>The Fibonacci numbers are <span class="math display">\[1, 1, 2, 3, 5, 8, 13, \dots\]</span> and satisfy <span class="math inline">\(a_n = a_{n-1} + a_{n-2}\)</span> for <span class="math inline">\(n \ge 2\)</span> when we set <span class="math inline">\(a_0 = 1\)</span> and <span class="math inline">\(a_1 = 1\)</span>.</p>
+<p><strong>Example D.31</strong><br>
+The following code can be used to compute Fibonacci numbers.</p>
 <div id="qpyodide-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
+</section>
+<section id="exercise-d.32" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.32">Exercise D.32</h3>
+<p>Implement the code from the above example. Use a reference (for example, a list of Fibonacci numbers) to verify that it gives the correct output.</p>
+</section>
+<section id="exercise-d.33" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.33">Exercise D.33</h3>
+<p>Use the method of the above examples to create a list containing a few partial sums of the infinite series <span class="math inline">\(\sum_{k=0}^\infty 1/2^k\)</span>.</p>
 <div id="qpyodide-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="exercise-d.12" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.12">Exercise D.12</h3>
-<p>Rewrite the code in Exercise D.9 using <code>for</code> loops.</p>
+<section id="remark-d.34-for-loops-versus-list-comprehensions" class="level3">
+<h3 class="anchored" data-anchor-id="remark-d.34-for-loops-versus-list-comprehensions">Remark D.34 (for-loops versus list comprehensions)</h3>
+<p>Pure for-loops are available in most programming languages, while list comprehensions are specific to Python. If you want to adapt to other languages, use list comprehensions sparingly.</p>
+</section>
+<section id="remark-d.35-how-to-time-a-computation" class="level3">
+<h3 class="anchored" data-anchor-id="remark-d.35-how-to-time-a-computation">Remark D.35 (how to time a computation)</h3>
+<p>You can measure how long it takes for a program to run. Here is how:</p>
 <div id="qpyodide-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="exercise-d.36" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.36">Exercise D.36</h3>
+<p>Consider the code:</p>
 <div id="qpyodide-insertion-location-20"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="some-words-on-datatypes-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="some-words-on-datatypes-in-python">Some words on datatypes in Python</h3>
-<p>Python stores variables in different ways depending on whether they contain text, numbers, or lists. We say that Python uses different datatypes. For instance, Python will treat a number differently depending on whether or not it is an integer.</p>
-<p><strong>Example D.13</strong></p>
-<div id="qpyodide-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.14" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.14">Exercise D.14</h3>
 <ol type="1">
-<li>Check the type of the variable defined by <code>b = 3/2</code>.</li>
-<li>Check the type of the variable defined by <code>c = 4/2</code>.</li>
+<li>What does the code compute?</li>
+<li>Do the same as in (1), except by first creating a sequence <code>a</code> and then computing its sum using <code>sum(a)</code>.</li>
+<li>Use the timing code above to compare which method is fastest.</li>
 </ol>
-<div id="qpyodide-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In addition to integers and floating point numbers, we will encounter the following datatypes in this chapter:</p>
-<ul>
-<li><strong>String</strong>: a variable containing text, e.g.&nbsp;<code>a = "Hej"</code>.</li>
-<li><strong>List</strong>: a variable containing a list of other variables, e.g.&nbsp;<code>a = [2, 3/2, "Hej"]</code>.</li>
-<li><strong>Numpy array</strong>: a special type of list that can only contain integers or floating point numbers (and has more advanced features).</li>
-</ul>
 </section>
-<section id="how-to-store-and-manipulate-sequences-using-python-lists" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-store-and-manipulate-sequences-using-python-lists">How to store and manipulate sequences using Python lists</h3>
-<p>One way of storing sequences in Python is by using lists.</p>
-<p><strong>Example D.16</strong></p>
-<div id="qpyodide-insertion-location-23"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The code is more or less explained by the comments, but we note:</p>
-<ol type="1">
-<li>Use square brackets <code>[</code> <code>]</code> to create a list and commas <code>,</code> to separate entries.</li>
-<li>Writing <code>a[3] = 10</code> changes an entry in the list.</li>
-<li><code>len</code>, <code>sum</code>, <code>max</code>, and <code>min</code> work only if the list contains numbers.</li>
-<li>Lists are easy to modify with <code>append</code>, <code>pop</code>, concatenation, and slicing.</li>
-</ol>
+<section id="remark-d.37" class="level3">
+<h3 class="anchored" data-anchor-id="remark-d.37">Remark D.37</h3>
+<p>Python is useful but fairly slow. Built-in commands are usually implemented in faster languages (such as C++), so if speed is important, use built-in functions as much as possible.</p>
 
 
 </section>

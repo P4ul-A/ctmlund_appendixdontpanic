@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.1 Introduction – ConvertingAppendix</title>
+<title>Appendix D.5 Number Representation – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,41 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -265,7 +230,7 @@ globalThis.qpyodideCustomizedPyodideOptions = {
 }
 
 // Store cell data
-globalThis.qpyodideCellDetails = [{"code":"print(\"Hello world\")\nprint(\"2+2=\", 2 + 2)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\nprint(\"a+b=\", c)","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\na = 10\nprint(\"a+b=\", c)","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 7\nb = 3\n\nprint(\"a + b =\", a + b)\nprint(\"a * b =\", a * b)\nprint(\"a - b =\", a - b)\nprint(\"a - -b =\", a - -b)\nprint(\"a / b =\", a / b)\nprint(\"a // b =\", a // b)\nprint(\"a % b =\", a % b)","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"ponies = 2\ncookies = 4\npony_Cookie32 = ponies + cookies\nprint(pony_Cookie32)","id":5,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2; b = 4  # Two commands on the same line.\nc = (a + b) - 3  # Here we use soft parentheses.\n\nprint(c)","id":6,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\n6 = a + b\nprint(a + b)","id":7,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\na = a + b\nprint(a)","id":8,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\na = b\nprint(b)","id":9,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2\nb = 4\nc = a + b\nprint(c)","id":10,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2; b = 4; a = a + b\n\nprint(b)","id":11,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"Ponies = 2\nCookies = 4\nRainbows = ponies + cookies\nprint(rainbows)","id":12,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 1\na = a + 1/2\na = a + 1/4\na = a + 1/8\na = a + 1/16\n\nprint(a)","id":13,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 1\na = 1/(1 + a)\na = 1/(1 + a)\na = 1/(1 + a)\na = 1/(1 + a)\n\nprint(a)","id":14,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 0\nprint(a)\na = 1\nprint(a)\na = 2\nprint(a)\na = 3\nprint(a)\nprint(\"the end!\")","id":15,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    a = n\n    print(a)\nprint(\"the end!\")","id":16,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    print(n)\nprint(\"mississippi\")\nprint(\"hello\")","id":17,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"for n in range(0, 4):\n    print(n)\n    print(\"mississippi\")\nprint(\"hello\")","id":18,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# (a) Rebuild the sum 1 + 1/2 + 1/4 + 1/8 + 1/16 using a for-loop.\na = 1\n\n# TODO: update a inside a for-loop\n\nprint(\"Result for (a):\", a)","id":19,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"# (b) Rebuild the repeated fraction using a for-loop.\na = 1\n\n# TODO: update a inside a for-loop\n\nprint(\"Result for (b):\", a)","id":20,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 2  # Here we store the value 2 as an integer.\nprint(type(a))  # Prints: <class 'int'>","id":21,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"b = 3/2\nc = 4/2\n\nprint(\"type(b) =\", type(b))\nprint(\"type(c) =\", type(c))","id":22,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = [0, 1, 2, 3, 4, 5]  # list of integers\nb = [\"cheese\", 88]  # list of a string and an ice cream\n\nprint(a)       # prints the entire list\nprint(a[0])    # prints 1st entry\nprint(a[3])    # prints 4th entry\nprint(a[-1])   # prints last entry\nprint(a[-2])   # prints second to last entry\n\nprint(\"len(a) =\", len(a))  # length of the list\nprint(\"sum(a) =\", sum(a))  # sum of entries\nprint(\"max(a) =\", max(a))  # largest entry\nprint(\"min(a) =\", min(a))  # smallest entry\n\na.append(\"oi\")  # add entry \"oi\" to the end of the list\na.pop(3)  # delete the 4th entry in the list\n\nc = a + b  # concatenation\nd = b * 2  # repetition\n\ne = a[2:5]    # slice: entries 2, 3, 4\nf = a[2:]     # slice from index 2 to the end\ng = a[:5]     # slice from start to index 4\nh = a[1:4:2]  # every second entry between indices 1 and 3\n\nprint(\"c =\", c)\nprint(\"d =\", d)\nprint(\"e =\", e)\nprint(\"f =\", f)\nprint(\"g =\", g)\nprint(\"h =\", h)","id":23,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
+globalThis.qpyodideCellDetails = [{"code":"S = 0.0\nfor k in range(0, 101):\n    S += 1 / 2**k\n\nprint(\"S_100 =\", S)","id":1,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"S = 0.0\nfor k in range(0, 101):\n    S += 1 / 2**k\n\nprint(1 / (2 - S))","id":2,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"my_number = 8","id":3,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}},{"code":"a = 325660000\nb = 0.000032566\n\nprint(100 * (a + b))\nprint(1000 * (a + b))\nprint(10000 * (a + b))\n\nprint(\"{:.20f}\".format(a + b))","id":4,"options":{"autorun":"","classes":"","comment":"","context":"interactive","dpi":72,"fig-cap":"","fig-height":5,"fig-width":7,"label":"","message":"true","out-height":"","out-width":"700px","output":"true","read-only":"false","results":"markup","warning":"true"}}];
 
 
 </script>
@@ -456,6 +421,35 @@ globalThis._qpyodideGetInstance = function() {
 
 </script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -482,7 +476,7 @@ globalThis._qpyodideGetInstance = function() {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./appendix_d1.html" aria-current="page"> 
+    <a class="nav-link" href="./appendix_d1.html"> 
 <span class="menu-text">D.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
@@ -498,7 +492,7 @@ globalThis._qpyodideGetInstance = function() {
 <span class="menu-text">D.4 Functions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./appendix_d5.html"> 
+    <a class="nav-link active" href="./appendix_d5.html" aria-current="page"> 
 <span class="menu-text">D.5 Number Representation</span></a>
   </li>  
   <li class="nav-item">
@@ -525,22 +519,24 @@ globalThis._qpyodideGetInstance = function() {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.1-introduction" id="toc-d.1-introduction" class="nav-link active" data-scroll-target="#d.1-introduction">D.1 Introduction</a>
+  <li><a href="#d.5-how-numbers-are-represented-in-python" id="toc-d.5-how-numbers-are-represented-in-python" class="nav-link active" data-scroll-target="#d.5-how-numbers-are-represented-in-python">D.5 How numbers are represented in Python</a>
   <ul class="collapse">
-  <li><a href="#how-to-install-python-3-and-write-your-first-program" id="toc-how-to-install-python-3-and-write-your-first-program" class="nav-link" data-scroll-target="#how-to-install-python-3-and-write-your-first-program">How to install Python 3 and write your first program</a></li>
-  <li><a href="#exercise-d.1" id="toc-exercise-d.1" class="nav-link" data-scroll-target="#exercise-d.1">Exercise D.1</a></li>
-  <li><a href="#a-first-look-at-basic-syntax-for-arithmetic-in-python" id="toc-a-first-look-at-basic-syntax-for-arithmetic-in-python" class="nav-link" data-scroll-target="#a-first-look-at-basic-syntax-for-arithmetic-in-python">A first look at basic syntax for arithmetic in Python</a></li>
-  <li><a href="#exercise-d.4" id="toc-exercise-d.4" class="nav-link" data-scroll-target="#exercise-d.4">Exercise D.4</a></li>
-  <li><a href="#basic-rules-for-variable-names" id="toc-basic-rules-for-variable-names" class="nav-link" data-scroll-target="#basic-rules-for-variable-names">Basic rules for variable names</a></li>
-  <li><a href="#indentation-line-breaks-and-comments" id="toc-indentation-line-breaks-and-comments" class="nav-link" data-scroll-target="#indentation-line-breaks-and-comments">Indentation, line breaks, and comments</a></li>
-  <li><a href="#exercise-d.8" id="toc-exercise-d.8" class="nav-link" data-scroll-target="#exercise-d.8">Exercise D.8</a></li>
-  <li><a href="#exercise-d.9" id="toc-exercise-d.9" class="nav-link" data-scroll-target="#exercise-d.9">Exercise D.9</a></li>
-  <li><a href="#a-first-look-at-how-to-efficiently-repeat-commands-in-python" id="toc-a-first-look-at-how-to-efficiently-repeat-commands-in-python" class="nav-link" data-scroll-target="#a-first-look-at-how-to-efficiently-repeat-commands-in-python">A first look at how to efficiently repeat commands in Python</a></li>
-  <li><a href="#exercise-d.11" id="toc-exercise-d.11" class="nav-link" data-scroll-target="#exercise-d.11">Exercise D.11</a></li>
-  <li><a href="#exercise-d.12" id="toc-exercise-d.12" class="nav-link" data-scroll-target="#exercise-d.12">Exercise D.12</a></li>
-  <li><a href="#some-words-on-datatypes-in-python" id="toc-some-words-on-datatypes-in-python" class="nav-link" data-scroll-target="#some-words-on-datatypes-in-python">Some words on datatypes in Python</a></li>
-  <li><a href="#exercise-d.14" id="toc-exercise-d.14" class="nav-link" data-scroll-target="#exercise-d.14">Exercise D.14</a></li>
-  <li><a href="#how-to-store-and-manipulate-sequences-using-python-lists" id="toc-how-to-store-and-manipulate-sequences-using-python-lists" class="nav-link" data-scroll-target="#how-to-store-and-manipulate-sequences-using-python-lists">How to store and manipulate sequences using Python lists</a></li>
+  <li><a href="#example-d.62" id="toc-example-d.62" class="nav-link" data-scroll-target="#example-d.62">Example D.62</a></li>
+  <li><a href="#exercise-d.63" id="toc-exercise-d.63" class="nav-link" data-scroll-target="#exercise-d.63">Exercise D.63</a></li>
+  <li><a href="#how-integers-are-represented-in-python" id="toc-how-integers-are-represented-in-python" class="nav-link" data-scroll-target="#how-integers-are-represented-in-python">How integers are represented in Python</a></li>
+  <li><a href="#exercise-d.66" id="toc-exercise-d.66" class="nav-link" data-scroll-target="#exercise-d.66">Exercise D.66</a></li>
+  <li><a href="#exercise-d.68" id="toc-exercise-d.68" class="nav-link" data-scroll-target="#exercise-d.68">Exercise D.68</a></li>
+  <li><a href="#how-non-integers-are-represented-in-python" id="toc-how-non-integers-are-represented-in-python" class="nav-link" data-scroll-target="#how-non-integers-are-represented-in-python">How non-integers are represented in Python</a></li>
+  <li><a href="#exercise-d.72" id="toc-exercise-d.72" class="nav-link" data-scroll-target="#exercise-d.72">Exercise D.72</a></li>
+  <li><a href="#exercise-d.73" id="toc-exercise-d.73" class="nav-link" data-scroll-target="#exercise-d.73">Exercise D.73</a></li>
+  <li><a href="#exercise-d.74" id="toc-exercise-d.74" class="nav-link" data-scroll-target="#exercise-d.74">Exercise D.74</a></li>
+  <li><a href="#example-d.75-binary-notation-for-non-integers" id="toc-example-d.75-binary-notation-for-non-integers" class="nav-link" data-scroll-target="#example-d.75-binary-notation-for-non-integers">Example D.75 (Binary notation for non-integers)</a></li>
+  <li><a href="#exercise-d.76" id="toc-exercise-d.76" class="nav-link" data-scroll-target="#exercise-d.76">Exercise D.76</a></li>
+  <li><a href="#remark-d.77-accurate-description-of-64-bit-floating-point-numbers" id="toc-remark-d.77-accurate-description-of-64-bit-floating-point-numbers" class="nav-link" data-scroll-target="#remark-d.77-accurate-description-of-64-bit-floating-point-numbers">Remark D.77 (Accurate description of 64-bit floating point numbers)</a></li>
+  <li><a href="#example-d.78" id="toc-example-d.78" class="nav-link" data-scroll-target="#example-d.78">Example D.78</a></li>
+  <li><a href="#exercise-d.79" id="toc-exercise-d.79" class="nav-link" data-scroll-target="#exercise-d.79">Exercise D.79</a></li>
+  <li><a href="#exercise-d.80-challenging" id="toc-exercise-d.80-challenging" class="nav-link" data-scroll-target="#exercise-d.80-challenging">Exercise D.80 (Challenging)</a></li>
+  <li><a href="#remark-d.81-the-effect-of-round-off-errors" id="toc-remark-d.81-the-effect-of-round-off-errors" class="nav-link" data-scroll-target="#remark-d.81-the-effect-of-round-off-errors">Remark D.81 (The effect of round-off errors)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -560,7 +556,7 @@ globalThis._qpyodideGetInstance = function() {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.1 Introduction</h1>
+<h1 class="title">Appendix D.5 Number Representation</h1>
 </div>
 
 
@@ -580,32 +576,28 @@ globalThis._qpyodideGetInstance = function() {
 <p>Appendix D: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.1-introduction" class="level2">
-<h2 class="anchored" data-anchor-id="d.1-introduction">D.1 Introduction</h2>
-<section id="how-to-install-python-3-and-write-your-first-program" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-install-python-3-and-write-your-first-program">How to install Python 3 and write your first program</h3>
-<p>Go to <a href="https://www.spyder-ide.org" class="uri">https://www.spyder-ide.org</a> and download and install the latest version of Spyder.<br>
-Once installed, launch the program.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Figure omitted in this web version.</p>
-</div>
-</div>
-</section>
-<section id="exercise-d.1" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.1">Exercise D.1</h3>
-<p>Type <code>print("Hello world")</code> in the editor window and press the green play button.<br>
-What output do you get? Also try <code>print("2+2=", 2+2)</code>.</p>
+<section id="d.5-how-numbers-are-represented-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="d.5-how-numbers-are-represented-in-python">D.5 How numbers are represented in Python</h2>
+<p>We end this appendix by examining how numbers are represented in Python and some peculiar consequences of this.</p>
+<section id="example-d.62" class="level3">
+<h3 class="anchored" data-anchor-id="example-d.62">Example D.62</h3>
+<p>At the start of Chapter 3, we considered the infinite series <span class="math display">\[\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.\]</span></p>
+<p>Let <span class="math inline">\(S_n\)</span> denote the <span class="math inline">\(n\)</span>th partial sum. The point is that <span class="math inline">\(2 - S_n = 1/2^n\)</span>, so <span class="math inline">\(S_n \ne 2\)</span>. But if we ask Python to compute, say, <span class="math inline">\(S_{100}\)</span>, it returns <code>2</code>.</p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="exercise-d.63" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.63">Exercise D.63</h3>
+<p>Does Python really mean that <span class="math inline">\(S_{100} = 2\)</span>, or is there something else going on? One way to double check is to ask Python to compute <span class="math inline">\(1 / (2 - S_{100})\)</span>.</p>
+<div id="qpyodide-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="how-integers-are-represented-in-python" class="level3">
+<h3 class="anchored" data-anchor-id="how-integers-are-represented-in-python">How integers are represented in Python</h3>
+<p>If we run</p>
+<div id="qpyodide-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Python stores the integer using a fixed number of bits (modern computers typically use 64 bits for integers).</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -616,185 +608,104 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong>Remark.</strong> Python treats <code>"2+2"</code> as text to be printed, and <code>2+2</code> as something to be computed. A comma is used to separate different types of input to <code>print</code>.</p>
+<p>Figures omitted in this web version.</p>
 </div>
 </div>
+<p><strong>Example D.65 (Decimal and binary notation)</strong><br>
+In decimal: <span class="math display">\[4132 = 4\cdot10^3 + 1\cdot10^2 + 3\cdot10^1 + 2\cdot10^0.\]</span></p>
+<p>In binary: <span class="math display">\[1101_2 = 1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0.\]</span></p>
+<p>If it is not clear whether a number is written in binary or decimal, we can use the notations <span class="math inline">\((1101)_2\)</span> and <span class="math inline">\((1101)_{10}\)</span>.</p>
+<p>Counting in binary: <span class="math inline">\((0)_2=0\)</span>, <span class="math inline">\((1)_2=1\)</span>, <span class="math inline">\((10)_2=2\)</span>, <span class="math inline">\((11)_2=3\)</span>, <span class="math inline">\((100)_2=4\)</span>, <span class="math inline">\((101)_2=5\)</span>, <span class="math inline">\((110)_2=6\)</span>, <span class="math inline">\((111)_2=7\)</span>, <span class="math inline">\((1000)_2=8\)</span>, and so on.</p>
 </section>
-<section id="a-first-look-at-basic-syntax-for-arithmetic-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="a-first-look-at-basic-syntax-for-arithmetic-in-python">A first look at basic syntax for arithmetic in Python</h3>
-<p>We now consider how to do basic arithmetic in Python.</p>
-<p><strong>Example D.2</strong> Enter the following code into the Spyder editor.</p>
-<div id="qpyodide-insertion-location-2"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>When you press the green play button you get the output <code>a+b=6</code>.</p>
-<p>Here, <code>a</code>, <code>b</code>, and <code>c</code> are variables. Technically speaking, a variable is a space in the memory of the computer which can store one piece of information, such as a number.</p>
-<p><strong>Example D.3</strong> Enter the following code into the Spyder editor.</p>
-<div id="qpyodide-insertion-location-3"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>When you press the green play button you still get the output <code>a+b=6</code>.</p>
-<p>Line-by-line explanation of Example D.2:</p>
+<section id="exercise-d.66" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.66">Exercise D.66</h3>
+<p>Check that the above list is correct, and continue the list to 20.</p>
+</section>
+<section id="exercise-d.68" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.68">Exercise D.68</h3>
 <ol type="1">
-<li>Python creates a variable <code>a</code> and assigns it the value <code>2</code>.</li>
-<li>Python creates a variable <code>b</code> and assigns it the value <code>4</code>.</li>
-<li>Python creates a variable <code>c</code>, computes <code>a + b</code>, and assigns this value to <code>c</code>.</li>
-<li>Python prints the value of <code>c</code> on the screen (together with the string <code>"a+b="</code>).</li>
+<li>What is the largest integer you can represent as an 8-bit integer?</li>
+<li>Modern computers use 64-bit integers, where 1 bit is used for the sign and 63 for the number itself. What is the largest integer you can represent using a 64-bit integer?</li>
 </ol>
-<p>The above example illustrates several peculiarities of arithmetic in Python and how a code is run:</p>
+<p><strong>Remark D.69 (Two’s complement)</strong><br>
+Our explanation above is correct for positive integers. For negative integers, a strategy called two’s complement is used. For an 8-bit integer, this allows representation of integers from <code>-128</code> to <code>127</code>.</p>
+</section>
+<section id="how-non-integers-are-represented-in-python" class="level3">
+<h3 class="anchored" data-anchor-id="how-non-integers-are-represented-in-python">How non-integers are represented in Python</h3>
+<p>Real numbers that are not integers are stored using the datatype <code>float</code>. Because memory is finite, not all real numbers can be represented exactly.</p>
+<p><strong>Remark D.70 (Sloppy description of 64-bit floating numbers)</strong><br>
+A 64-bit computer sets aside 64 bits to represent a real number of the form <span class="math inline">\(\epsilon \cdot 10^\alpha\)</span>, where <span class="math inline">\(\epsilon\)</span> is (roughly) a 16-digit integer and the exponent <span class="math inline">\(\alpha\)</span> is roughly between <code>-340</code> and <code>+292</code>.</p>
+<p><strong>Example D.71</strong><br>
+Using the sloppy description, the number <span class="math inline">\(\sqrt{2}\)</span> is stored roughly as <span class="math display">\[1.414213562373095 \cdot 10^0.\]</span></p>
+</section>
+<section id="exercise-d.72" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.72">Exercise D.72</h3>
+<p>According to the sloppy definition:</p>
 <ol type="1">
-<li>The code is executed line by line.</li>
-<li>Expressions such as <code>a = b</code> should be read from right to left. That is, <code>a</code> is assigned whatever value <code>b</code> has, but not vice versa.</li>
-<li>If a variable gets assigned some value, it has no memory of how that happened. Changing <code>a</code> later does not affect the value stored in <code>c</code>.</li>
+<li>How far is it between the floating point representation of <span class="math inline">\(\sqrt{2}\)</span> and its closest floating point neighbor?</li>
+<li>How far is it between <span class="math inline">\(x=0\)</span> and the next floating point number?</li>
 </ol>
 </section>
-<section id="exercise-d.4" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.4">Exercise D.4</h3>
-<p>Explore the various ways to do arithmetic operations in Python by running the following commands for suitable values of <code>a</code> and <code>b</code>:</p>
-<p><code>a + b</code>, <code>a * b</code>, <code>a - b</code>, <code>a - -b</code>, <code>a / b</code>, <code>a // b</code>, <code>a % b</code>.</p>
+<section id="exercise-d.73" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.73">Exercise D.73</h3>
+<p>Put <code>a = 325660000</code>, <code>b = 0.000032566</code> and use Python to compute <code>100*(a+b)</code>, <code>1000*(a+b)</code>, and <code>10000*(a+b)</code>. How are the results stored? Are there any round-off errors?</p>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="basic-rules-for-variable-names" class="level3">
-<h3 class="anchored" data-anchor-id="basic-rules-for-variable-names">Basic rules for variable names</h3>
-<p>We now turn to a discussion of the basic syntax in Python. First, the types of names you are allowed to give a variable.</p>
-<p><strong>Example D.5</strong> You can give variables much more interesting names than just <code>a</code>, <code>b</code>, <code>x</code>, or <code>y</code>. Here is an example:</p>
-<div id="qpyodide-insertion-location-5"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>We make the following remarks:</p>
-<ol start="4" type="1">
-<li>Python is case sensitive. This means that <code>n</code> and <code>N</code> are as different as <code>n</code> and <code>m</code>.</li>
-<li>By tradition, the name of a variable should never start with an upper case letter.</li>
-<li>A variable cannot be given a numerical name such as <code>2</code> or <code>34</code>. Numbers can be part of the name of a variable, as long as the name starts with a letter or an underscore <code>_</code>. Certain special symbols, such as <code>$</code>, <code>#</code>, and <code>%</code>, can never be used in the name of a variable.</li>
-<li>The name of a variable cannot contain a space.</li>
-<li>You should not give a variable a name that already means something different. For instance, do not give a variable the name <code>print</code> (however, <code>Print</code> is fine).</li>
-</ol>
-</section>
-<section id="indentation-line-breaks-and-comments" class="level3">
-<h3 class="anchored" data-anchor-id="indentation-line-breaks-and-comments">Indentation, line breaks, and comments</h3>
-<p><strong>Example D.6</strong> In Python, we need to be careful with how we place indentations. For instance, both of the following programs will crash:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    c <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(c)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<ol start="9" type="1">
-<li>Python is careful with indentation. If Python does not understand why we make some indentation, it will crash.</li>
-<li>Later in this chapter, we will see situations where indentations become a natural part of the code (for loops, while loops, if-else structures, and functions).</li>
-</ol>
-<p><strong>Example D.7</strong> In contrast to the situation with indentations, Python is much less sensitive with respect to whether or not we skip a line. The following code runs just fine:</p>
-<div id="qpyodide-insertion-location-6"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<ol start="11" type="1">
-<li><p>Python does not care if you skip a line, or twenty.</p></li>
-<li><p>You can place multiple commands on the same line, as long as they are separated by a semicolon <code>;</code>.</p></li>
-<li><p>Everything you write on a line following a hashtag <code>#</code> is ignored by Python.</p></li>
-<li><p>You can use “soft” parentheses <code>(</code> and <code>)</code> just as you would in a normal computation. You cannot replace them with <code>[</code> <code>]</code> or <code>{</code> <code>}</code>.</p></li>
-<li><p>It is a good thing for a program to crash. It is a way for Python to let you know that the result would probably have been false because the code was written in a bad way.</p></li>
-</ol>
-</section>
-<section id="exercise-d.8" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.8">Exercise D.8</h3>
-<p>Will the following codes run? If not, why? If yes, what is the output?</p>
-<p><strong>(a)</strong></p>
-<div id="qpyodide-insertion-location-7"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
-<div id="qpyodide-insertion-location-8"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(c)</strong></p>
-<div id="qpyodide-insertion-location-9"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(d)</strong></p>
-<div id="qpyodide-insertion-location-10"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(e)</strong></p>
-<div id="qpyodide-insertion-location-11"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(f)</strong></p>
-<div id="qpyodide-insertion-location-12"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.9" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.9">Exercise D.9</h3>
-<p>Consider the following codes. Can you express mathematically what they compute?</p>
-<p><strong>(a)</strong></p>
-<div id="qpyodide-insertion-location-13"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
-<div id="qpyodide-insertion-location-14"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Hint: You have already seen these objects on page 87.</p>
-</section>
-<section id="a-first-look-at-how-to-efficiently-repeat-commands-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="a-first-look-at-how-to-efficiently-repeat-commands-in-python">A first look at how to efficiently repeat commands in Python</h3>
-<p>In Exercise D.9 above, you were asked to consider a code where an operation was repeated multiple times. We now explain one way this can be done using a <code>for</code> loop.</p>
-<p><strong>Example D.10 (For-loop)</strong> The following two codes do exactly the same thing when run.</p>
-<div id="qpyodide-insertion-location-15"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qpyodide-insertion-location-16"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Explanation of the <code>for</code> loop:</p>
+<section id="exercise-d.74" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.74">Exercise D.74</h3>
+<p>Use the sloppy description of float numbers to do the following:</p>
 <ol type="1">
-<li><code>for n in range(0, 4)</code> means the block below is repeated for each <code>n</code> between <code>0</code> and <code>3</code> (but not <code>4</code>).</li>
-<li>The indented lines are run by the loop. The loop first runs with <code>n = 0</code>, then <code>n = 1</code>, and so on until <code>n = 3</code>.</li>
-<li>After the loop ends, Python moves on to the first unindented line following it.</li>
+<li>Explain how large <code>N</code> has to be for the computer to think that <span class="math inline">\(1 + 2^{-N} = 1\)</span>.</li>
+<li>How large does <code>N</code> have to be for the computer to think that <span class="math inline">\(2^{-N} = 0\)</span>?</li>
 </ol>
 </section>
-<section id="exercise-d.11" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.11">Exercise D.11</h3>
-<p>Will these codes run? If so, what are their outputs?</p>
-<p><strong>(a)</strong></p>
-<div id="qpyodide-insertion-location-17"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>(b)</strong></p>
-<div id="qpyodide-insertion-location-18"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="example-d.75-binary-notation-for-non-integers" class="level3">
+<h3 class="anchored" data-anchor-id="example-d.75-binary-notation-for-non-integers">Example D.75 (Binary notation for non-integers)</h3>
+<p>Binary notation for non-integers works like decimal notation. Compare: <span class="math display">\[643.57_{10} = 6\cdot10^2 + 4\cdot10^1 + 3\cdot10^0 + 5\cdot10^{-1} + 7\cdot10^{-2}\]</span> and <span class="math display">\[101.01_2 = 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2}.\]</span></p>
 </section>
-<section id="exercise-d.12" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.12">Exercise D.12</h3>
-<p>Rewrite the code in Exercise D.9 using <code>for</code> loops.</p>
-<div id="qpyodide-insertion-location-19"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<div id="qpyodide-insertion-location-20"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="some-words-on-datatypes-in-python" class="level3">
-<h3 class="anchored" data-anchor-id="some-words-on-datatypes-in-python">Some words on datatypes in Python</h3>
-<p>Python stores variables in different ways depending on whether they contain text, numbers, or lists. We say that Python uses different datatypes. For instance, Python will treat a number differently depending on whether or not it is an integer.</p>
-<p><strong>Example D.13</strong></p>
-<div id="qpyodide-insertion-location-21"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.14" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.14">Exercise D.14</h3>
+<section id="exercise-d.76" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.76">Exercise D.76</h3>
+<p>As a small taste of binary arithmetic, figure out both the decimal and binary representations of:</p>
 <ol type="1">
-<li>Check the type of the variable defined by <code>b = 3/2</code>.</li>
-<li>Check the type of the variable defined by <code>c = 4/2</code>.</li>
+<li><span class="math inline">\((101.01)_2 \cdot 2^2\)</span></li>
+<li><span class="math inline">\((101.01)_2 \cdot 2^1\)</span></li>
+<li><span class="math inline">\((101.01)_2 \cdot 2^{-1}\)</span></li>
 </ol>
-<div id="qpyodide-insertion-location-22"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>In addition to integers and floating point numbers, we will encounter the following datatypes in this chapter:</p>
-<ul>
-<li><strong>String</strong>: a variable containing text, e.g.&nbsp;<code>a = "Hej"</code>.</li>
-<li><strong>List</strong>: a variable containing a list of other variables, e.g.&nbsp;<code>a = [2, 3/2, "Hej"]</code>.</li>
-<li><strong>Numpy array</strong>: a special type of list that can only contain integers or floating point numbers (and has more advanced features).</li>
-</ul>
 </section>
-<section id="how-to-store-and-manipulate-sequences-using-python-lists" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-store-and-manipulate-sequences-using-python-lists">How to store and manipulate sequences using Python lists</h3>
-<p>One way of storing sequences in Python is by using lists.</p>
-<p><strong>Example D.16</strong></p>
-<div id="qpyodide-insertion-location-23"></div>
-<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>The code is more or less explained by the comments, but we note:</p>
-<ol type="1">
-<li>Use square brackets <code>[</code> <code>]</code> to create a list and commas <code>,</code> to separate entries.</li>
-<li>Writing <code>a[3] = 10</code> changes an entry in the list.</li>
-<li><code>len</code>, <code>sum</code>, <code>max</code>, and <code>min</code> work only if the list contains numbers.</li>
-<li>Lists are easy to modify with <code>append</code>, <code>pop</code>, concatenation, and slicing.</li>
-</ol>
+<section id="remark-d.77-accurate-description-of-64-bit-floating-point-numbers" class="level3">
+<h3 class="anchored" data-anchor-id="remark-d.77-accurate-description-of-64-bit-floating-point-numbers">Remark D.77 (Accurate description of 64-bit floating point numbers)</h3>
+<p>A 64-bit floating point number is stored in the form <span class="math display">\[(1.\epsilon)_2 \cdot 2^\alpha,\]</span> where <span class="math inline">\(\epsilon\)</span> is a string of 52 bits and the exponent <span class="math inline">\(\alpha\)</span> is an 11-bit integer. The remaining bit is used for the sign.</p>
+<p>When the exponent <span class="math inline">\(\alpha\)</span> is the smallest possible, <span class="math inline">\((1.\epsilon)_2\)</span> is replaced by <span class="math inline">\((0.\epsilon)_2\)</span> to offer additional accuracy close to the origin.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Figures omitted in this web version.</p>
+</div>
+</div>
+</section>
+<section id="example-d.78" class="level3">
+<h3 class="anchored" data-anchor-id="example-d.78">Example D.78</h3>
+<p>How do we store <span class="math inline">\(1/10\)</span> as a floating point number? The binary expansion of <span class="math inline">\(1/10\)</span> is <span class="math display">\[0.00011001100110011\ldots_2\]</span> which is repeating. This means it cannot be stored exactly, so we must round.</p>
+</section>
+<section id="exercise-d.79" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.79">Exercise D.79</h3>
+<p>Translate the accurate description of 64-bit floating point numbers to decimal notation to obtain the sloppy description above. Take into account the added accuracy close to the origin.</p>
+</section>
+<section id="exercise-d.80-challenging" class="level3">
+<h3 class="anchored" data-anchor-id="exercise-d.80-challenging">Exercise D.80 (Challenging)</h3>
+<p>Explain which fractions can be represented without round-off error as 64-bit floating point numbers.</p>
+</section>
+<section id="remark-d.81-the-effect-of-round-off-errors" class="level3">
+<h3 class="anchored" data-anchor-id="remark-d.81-the-effect-of-round-off-errors">Remark D.81 (The effect of round-off errors)</h3>
+<p>When using Python to compute and visualize data, we must consider whether results are real or caused by round-off error. This is especially important for functions with large or small scales.</p>
 
 
 </section>
