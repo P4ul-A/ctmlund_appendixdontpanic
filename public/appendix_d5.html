@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.5 Number Representation – ConvertingAppendix</title>
+<title>Appendix A.5 Number Representation – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -477,27 +477,31 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d1.html"> 
-<span class="menu-text">D.1 Introduction</span></a>
+<span class="menu-text">A.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d2.html"> 
-<span class="menu-text">D.2 Sequences and Sums</span></a>
+<span class="menu-text">A.2 Sequences and Sums</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d3.html"> 
-<span class="menu-text">D.3 Control Statements</span></a>
+<span class="menu-text">A.3 Control Statements</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d4.html"> 
-<span class="menu-text">D.4 Functions</span></a>
+<span class="menu-text">A.4 Functions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./appendix_d5.html" aria-current="page"> 
-<span class="menu-text">D.5 Number Representation</span></a>
+<span class="menu-text">A.5 Number Representation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d6.html"> 
-<span class="menu-text">D.6 Answers</span></a>
+<span class="menu-text">A.6 Answers</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./appendix_all.html"> 
+<span class="menu-text">A.All Combined</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -519,24 +523,10 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.5-how-numbers-are-represented-in-python" id="toc-d.5-how-numbers-are-represented-in-python" class="nav-link active" data-scroll-target="#d.5-how-numbers-are-represented-in-python">D.5 How numbers are represented in Python</a>
+  <li><a href="#a.5-how-numbers-are-represented-in-python" id="toc-a.5-how-numbers-are-represented-in-python" class="nav-link active" data-scroll-target="#a.5-how-numbers-are-represented-in-python">A.5 How numbers are represented in Python</a>
   <ul class="collapse">
-  <li><a href="#example-d.62" id="toc-example-d.62" class="nav-link" data-scroll-target="#example-d.62">Example D.62</a></li>
-  <li><a href="#exercise-d.63" id="toc-exercise-d.63" class="nav-link" data-scroll-target="#exercise-d.63">Exercise D.63</a></li>
   <li><a href="#how-integers-are-represented-in-python" id="toc-how-integers-are-represented-in-python" class="nav-link" data-scroll-target="#how-integers-are-represented-in-python">How integers are represented in Python</a></li>
-  <li><a href="#exercise-d.66" id="toc-exercise-d.66" class="nav-link" data-scroll-target="#exercise-d.66">Exercise D.66</a></li>
-  <li><a href="#exercise-d.68" id="toc-exercise-d.68" class="nav-link" data-scroll-target="#exercise-d.68">Exercise D.68</a></li>
   <li><a href="#how-non-integers-are-represented-in-python" id="toc-how-non-integers-are-represented-in-python" class="nav-link" data-scroll-target="#how-non-integers-are-represented-in-python">How non-integers are represented in Python</a></li>
-  <li><a href="#exercise-d.72" id="toc-exercise-d.72" class="nav-link" data-scroll-target="#exercise-d.72">Exercise D.72</a></li>
-  <li><a href="#exercise-d.73" id="toc-exercise-d.73" class="nav-link" data-scroll-target="#exercise-d.73">Exercise D.73</a></li>
-  <li><a href="#exercise-d.74" id="toc-exercise-d.74" class="nav-link" data-scroll-target="#exercise-d.74">Exercise D.74</a></li>
-  <li><a href="#example-d.75-binary-notation-for-non-integers" id="toc-example-d.75-binary-notation-for-non-integers" class="nav-link" data-scroll-target="#example-d.75-binary-notation-for-non-integers">Example D.75 (Binary notation for non-integers)</a></li>
-  <li><a href="#exercise-d.76" id="toc-exercise-d.76" class="nav-link" data-scroll-target="#exercise-d.76">Exercise D.76</a></li>
-  <li><a href="#remark-d.77-accurate-description-of-64-bit-floating-point-numbers" id="toc-remark-d.77-accurate-description-of-64-bit-floating-point-numbers" class="nav-link" data-scroll-target="#remark-d.77-accurate-description-of-64-bit-floating-point-numbers">Remark D.77 (Accurate description of 64-bit floating point numbers)</a></li>
-  <li><a href="#example-d.78" id="toc-example-d.78" class="nav-link" data-scroll-target="#example-d.78">Example D.78</a></li>
-  <li><a href="#exercise-d.79" id="toc-exercise-d.79" class="nav-link" data-scroll-target="#exercise-d.79">Exercise D.79</a></li>
-  <li><a href="#exercise-d.80-challenging" id="toc-exercise-d.80-challenging" class="nav-link" data-scroll-target="#exercise-d.80-challenging">Exercise D.80 (Challenging)</a></li>
-  <li><a href="#remark-d.81-the-effect-of-round-off-errors" id="toc-remark-d.81-the-effect-of-round-off-errors" class="nav-link" data-scroll-target="#remark-d.81-the-effect-of-round-off-errors">Remark D.81 (The effect of round-off errors)</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -556,7 +546,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.5 Number Representation</h1>
+<h1 class="title">Appendix A.5 Number Representation</h1>
 </div>
 
 
@@ -573,25 +563,21 @@ window.Quarto = {
 </header>
 
 
-<p>Appendix D: A crash course in Python<br>
+<p>Appendix A: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.5-how-numbers-are-represented-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="d.5-how-numbers-are-represented-in-python">D.5 How numbers are represented in Python</h2>
+<section id="a.5-how-numbers-are-represented-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="a.5-how-numbers-are-represented-in-python">A.5 How numbers are represented in Python</h2>
 <p>We end this appendix by examining how numbers are represented in Python and some peculiar consequences of this.</p>
-<section id="example-d.62" class="level3">
-<h3 class="anchored" data-anchor-id="example-d.62">Example D.62</h3>
+<p><strong>Example E.62</strong></p>
 <p>At the start of Chapter 3, we considered the infinite series <span class="math display">\[\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.\]</span></p>
 <p>Let <span class="math inline">\(S_n\)</span> denote the <span class="math inline">\(n\)</span>th partial sum. The point is that <span class="math inline">\(2 - S_n = 1/2^n\)</span>, so <span class="math inline">\(S_n \ne 2\)</span>. But if we ask Python to compute, say, <span class="math inline">\(S_{100}\)</span>, it returns <code>2</code>.</p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.63" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.63">Exercise D.63</h3>
+<p><strong>Exercise E.63</strong></p>
 <p>Does Python really mean that <span class="math inline">\(S_{100} = 2\)</span>, or is there something else going on? One way to double check is to ask Python to compute <span class="math inline">\(1 / (2 - S_{100})\)</span>.</p>
 <div id="qpyodide-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
 <section id="how-integers-are-represented-in-python" class="level3">
 <h3 class="anchored" data-anchor-id="how-integers-are-represented-in-python">How integers are represented in Python</h3>
 <p>If we run</p>
@@ -611,70 +597,54 @@ Note
 <p>Figures omitted in this web version.</p>
 </div>
 </div>
-<p><strong>Example D.65 (Decimal and binary notation)</strong><br>
+<p><strong>Example E.65 (Decimal and binary notation)</strong><br>
 In decimal: <span class="math display">\[4132 = 4\cdot10^3 + 1\cdot10^2 + 3\cdot10^1 + 2\cdot10^0.\]</span></p>
 <p>In binary: <span class="math display">\[1101_2 = 1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0.\]</span></p>
 <p>If it is not clear whether a number is written in binary or decimal, we can use the notations <span class="math inline">\((1101)_2\)</span> and <span class="math inline">\((1101)_{10}\)</span>.</p>
 <p>Counting in binary: <span class="math inline">\((0)_2=0\)</span>, <span class="math inline">\((1)_2=1\)</span>, <span class="math inline">\((10)_2=2\)</span>, <span class="math inline">\((11)_2=3\)</span>, <span class="math inline">\((100)_2=4\)</span>, <span class="math inline">\((101)_2=5\)</span>, <span class="math inline">\((110)_2=6\)</span>, <span class="math inline">\((111)_2=7\)</span>, <span class="math inline">\((1000)_2=8\)</span>, and so on.</p>
-</section>
-<section id="exercise-d.66" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.66">Exercise D.66</h3>
+<p><strong>Exercise E.66</strong></p>
 <p>Check that the above list is correct, and continue the list to 20.</p>
-</section>
-<section id="exercise-d.68" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.68">Exercise D.68</h3>
+<p><strong>Exercise E.68</strong></p>
 <ol type="1">
 <li>What is the largest integer you can represent as an 8-bit integer?</li>
 <li>Modern computers use 64-bit integers, where 1 bit is used for the sign and 63 for the number itself. What is the largest integer you can represent using a 64-bit integer?</li>
 </ol>
-<p><strong>Remark D.69 (Two’s complement)</strong><br>
+<p><strong>Remark R.69 (Two’s complement)</strong><br>
 Our explanation above is correct for positive integers. For negative integers, a strategy called two’s complement is used. For an 8-bit integer, this allows representation of integers from <code>-128</code> to <code>127</code>.</p>
 </section>
 <section id="how-non-integers-are-represented-in-python" class="level3">
 <h3 class="anchored" data-anchor-id="how-non-integers-are-represented-in-python">How non-integers are represented in Python</h3>
 <p>Real numbers that are not integers are stored using the datatype <code>float</code>. Because memory is finite, not all real numbers can be represented exactly.</p>
-<p><strong>Remark D.70 (Sloppy description of 64-bit floating numbers)</strong><br>
+<p><strong>Remark R.70 (Sloppy description of 64-bit floating numbers)</strong><br>
 A 64-bit computer sets aside 64 bits to represent a real number of the form <span class="math inline">\(\epsilon \cdot 10^\alpha\)</span>, where <span class="math inline">\(\epsilon\)</span> is (roughly) a 16-digit integer and the exponent <span class="math inline">\(\alpha\)</span> is roughly between <code>-340</code> and <code>+292</code>.</p>
-<p><strong>Example D.71</strong><br>
+<p><strong>Example E.71</strong><br>
 Using the sloppy description, the number <span class="math inline">\(\sqrt{2}\)</span> is stored roughly as <span class="math display">\[1.414213562373095 \cdot 10^0.\]</span></p>
-</section>
-<section id="exercise-d.72" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.72">Exercise D.72</h3>
+<p><strong>Exercise E.72</strong></p>
 <p>According to the sloppy definition:</p>
 <ol type="1">
 <li>How far is it between the floating point representation of <span class="math inline">\(\sqrt{2}\)</span> and its closest floating point neighbor?</li>
 <li>How far is it between <span class="math inline">\(x=0\)</span> and the next floating point number?</li>
 </ol>
-</section>
-<section id="exercise-d.73" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.73">Exercise D.73</h3>
+<p><strong>Exercise E.73</strong></p>
 <p>Put <code>a = 325660000</code>, <code>b = 0.000032566</code> and use Python to compute <code>100*(a+b)</code>, <code>1000*(a+b)</code>, and <code>10000*(a+b)</code>. How are the results stored? Are there any round-off errors?</p>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.74" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.74">Exercise D.74</h3>
+<p><strong>Exercise E.74</strong></p>
 <p>Use the sloppy description of float numbers to do the following:</p>
 <ol type="1">
 <li>Explain how large <code>N</code> has to be for the computer to think that <span class="math inline">\(1 + 2^{-N} = 1\)</span>.</li>
 <li>How large does <code>N</code> have to be for the computer to think that <span class="math inline">\(2^{-N} = 0\)</span>?</li>
 </ol>
-</section>
-<section id="example-d.75-binary-notation-for-non-integers" class="level3">
-<h3 class="anchored" data-anchor-id="example-d.75-binary-notation-for-non-integers">Example D.75 (Binary notation for non-integers)</h3>
+<p><strong>Example E.75 (Binary notation for non-integers)</strong></p>
 <p>Binary notation for non-integers works like decimal notation. Compare: <span class="math display">\[643.57_{10} = 6\cdot10^2 + 4\cdot10^1 + 3\cdot10^0 + 5\cdot10^{-1} + 7\cdot10^{-2}\]</span> and <span class="math display">\[101.01_2 = 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2}.\]</span></p>
-</section>
-<section id="exercise-d.76" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.76">Exercise D.76</h3>
+<p><strong>Exercise E.76</strong></p>
 <p>As a small taste of binary arithmetic, figure out both the decimal and binary representations of:</p>
 <ol type="1">
 <li><span class="math inline">\((101.01)_2 \cdot 2^2\)</span></li>
 <li><span class="math inline">\((101.01)_2 \cdot 2^1\)</span></li>
 <li><span class="math inline">\((101.01)_2 \cdot 2^{-1}\)</span></li>
 </ol>
-</section>
-<section id="remark-d.77-accurate-description-of-64-bit-floating-point-numbers" class="level3">
-<h3 class="anchored" data-anchor-id="remark-d.77-accurate-description-of-64-bit-floating-point-numbers">Remark D.77 (Accurate description of 64-bit floating point numbers)</h3>
+<p><strong>Remark R.77 (Accurate description of 64-bit floating point numbers)</strong></p>
 <p>A 64-bit floating point number is stored in the form <span class="math display">\[(1.\epsilon)_2 \cdot 2^\alpha,\]</span> where <span class="math inline">\(\epsilon\)</span> is a string of 52 bits and the exponent <span class="math inline">\(\alpha\)</span> is an 11-bit integer. The remaining bit is used for the sign.</p>
 <p>When the exponent <span class="math inline">\(\alpha\)</span> is the smallest possible, <span class="math inline">\((1.\epsilon)_2\)</span> is replaced by <span class="math inline">\((0.\epsilon)_2\)</span> to offer additional accuracy close to the origin.</p>
 <div class="callout callout-style-default callout-note callout-titled">
@@ -690,21 +660,13 @@ Note
 <p>Figures omitted in this web version.</p>
 </div>
 </div>
-</section>
-<section id="example-d.78" class="level3">
-<h3 class="anchored" data-anchor-id="example-d.78">Example D.78</h3>
+<p><strong>Example E.78</strong></p>
 <p>How do we store <span class="math inline">\(1/10\)</span> as a floating point number? The binary expansion of <span class="math inline">\(1/10\)</span> is <span class="math display">\[0.00011001100110011\ldots_2\]</span> which is repeating. This means it cannot be stored exactly, so we must round.</p>
-</section>
-<section id="exercise-d.79" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.79">Exercise D.79</h3>
+<p><strong>Exercise E.79</strong></p>
 <p>Translate the accurate description of 64-bit floating point numbers to decimal notation to obtain the sloppy description above. Take into account the added accuracy close to the origin.</p>
-</section>
-<section id="exercise-d.80-challenging" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.80-challenging">Exercise D.80 (Challenging)</h3>
+<p><strong>Exercise E.80 (Challenging)</strong></p>
 <p>Explain which fractions can be represented without round-off error as 64-bit floating point numbers.</p>
-</section>
-<section id="remark-d.81-the-effect-of-round-off-errors" class="level3">
-<h3 class="anchored" data-anchor-id="remark-d.81-the-effect-of-round-off-errors">Remark D.81 (The effect of round-off errors)</h3>
+<p><strong>Remark R.81 (The effect of round-off errors)</strong></p>
 <p>When using Python to compute and visualize data, we must consider whether results are real or caused by round-off error. This is especially important for functions with large or small scales.</p>
 
 

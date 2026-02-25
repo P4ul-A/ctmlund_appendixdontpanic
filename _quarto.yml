@@ -8,18 +8,20 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: appendix_d1.qmd
-        text: D.1 Introduction
-      - href: appendix_d2.qmd
-        text: D.2 Sequences and Sums
-      - href: appendix_d3.qmd
-        text: D.3 Control Statements
-      - href: appendix_d4.qmd
-        text: D.4 Functions
-      - href: appendix_d5.qmd
-        text: D.5 Number Representation
-      - href: appendix_d6.qmd
-        text: D.6 Answers
+      - href: appendix_a1.qmd
+        text: A.1 Introduction
+      - href: appendix_a2.qmd
+        text: A.2 Sequences and Sums
+      - href: appendix_a3.qmd
+        text: A.3 Control Statements
+      - href: appendix_a4.qmd
+        text: A.4 Functions
+      - href: appendix_a5.qmd
+        text: A.5 Number Representation
+      - href: appendix_a6.qmd
+        text: A.6 Answers
+      - href: appendix_all.qmd
+        text: A.All Combined
       - about.qmd
 
 format:
@@ -29,4 +31,3 @@ format:
       - brand
     css: styles.css
     toc: true
-

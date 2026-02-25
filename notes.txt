@@ -3,3 +3,30 @@ D.13 no output
 d2 seq D23 nukes website
 
 D25 inconsitent output
+
+
+
+better output formatting?
+make it more visible
+
+General phylosophy:
+- super slim tutorial
+- hands on work your way through
+- examples are now interactive - less separation between example and exercises
+- Demo, exercise same time - tests
+- while reading, tinkering and playing around
+- end tests
+- all arrows towards math understanding
+
+Comprehensive python tutorial
+- Use math topics as guiding light for coding 
+- Write down strucuture of code programming
+
+Coding tutorial not Programming tutorial
+
+Connection to math refresher course
+- AI gives freedom in how the answer would be typed
+- similar treatment of pyhton appendix for this one
+- example 4.1  change numbers, ask further questions, what changes if you change to x^3, student anwsers in natural language, AI evaluation
+- MAKE READING MORE ACTIVE
+- refersher course signals what is expected from students

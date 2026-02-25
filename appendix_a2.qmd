@@ -1,22 +1,22 @@
 ---
-title: "Appendix D.2 Sequences and Sums"
+title: "Appendix A.2 Sequences and Sums"
 format: html
 filters:
   - pyodide
 ---
 
-Appendix D: A crash course in Python  
+Appendix A: A crash course in Python  
 NUMA01: Computational Programming with Python  
 Malin Christersson, Robert Klofkorn  
 
-## D.2 How to compute and visualize sequences and sums
+## A.2 How to compute and visualize sequences and sums
 
 ### Some ways to compute sequences in Python
 
 Suppose we want to compute many entries of the sequence
 $$\left(\frac{1}{2^k}\right)_{k=0}^\infty = \left(1, \frac{1}{2}, \frac{1}{4}, \dots \right).$$
 
-**Example D.17 (Computing sequences using a for-loop)**  
+**Example E.17 (Computing sequences using a for-loop)**  
 The following two codes do exactly the same thing when run.
 
 ```{pyodide-python}
@@ -35,7 +35,7 @@ for k in range(0, 3):
 Another way of computing lists is to use a list comprehension. It has the benefit of
 both computing and storing a sequence of numbers in a single line of code.
 
-**Example D.18 (Computing sequences using a list)**  
+**Example E.18 (Computing sequences using a list)**  
 The following two codes do exactly the same thing when run.
 
 ```{pyodide-python}
@@ -50,13 +50,13 @@ a = [1 / 2**k for k in range(0, 3)]
 print(a)
 ```
 
-### Exercise D.19
+**Exercise E.19**
 
 Run and compare the output of the codes in the above examples.
 
-### Exercise D.20
+**Exercise E.20**
 
-A difference between the right-most codes in Examples D.17 and D.18 is that in the
+A difference between the right-most codes in Examples E.17 and E.18 is that in the
 first, we do not store the values of the sequence anywhere. Here are two suggestions
 for how to fix this:
 
@@ -88,7 +88,7 @@ Let us now consider how to compute the sum of the first, say, million terms of t
 infinite series
 $$\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.$$
 
-**Example D.21 (Computing sums using a for-loop)**  
+**Example E.21 (Computing sums using a for-loop)**  
 The following two codes both compute the sum $1 + 1/2 + 1/4 + 1/8$.
 
 ```{pyodide-python}
@@ -106,7 +106,7 @@ for k in range(0, 3):
     a = a + 1 / 2**k
 ```
 
-**Example D.22 (Computing a sum using lists)**  
+**Example E.22 (Computing a sum using lists)**  
 The following two codes do exactly the same thing when run.
 
 ```{pyodide-python}
@@ -128,7 +128,7 @@ Using this technique, we can compute the sum in just one line:
 b = sum([1 / 2**k for k in range(0, 3)])
 ```
 
-### Exercise D.23
+**Exercise E.23**
 
 1. Run the codes from the examples on this page. Why do they not give any output?
    Fix this.
@@ -148,7 +148,7 @@ for k in range(0, N):
 
 ### How to visualize sequences and partial sums using for-loops
 
-**Example D.24**  
+**Example E.24**  
 The following code is perhaps the simplest way to visualize a sequence in Python.
 Here, we visualize the sequence $(1/2^k)_{k=0}^9$.
 
@@ -171,7 +171,7 @@ Explanation:
 Now modify the code so that we plot partial sums of the infinite series
 $$\sum_{k=0}^\infty \frac{1}{2^k}.$$
 
-**Example D.25**  
+**Example E.25**  
 The following code computes and visualizes the partial sums.
 
 ```{pyodide-python}
@@ -186,13 +186,13 @@ for k in range(0, 3):
 plt.show()
 ```
 
-### Exercise D.26
+**Exercise E.26**
 
 Run this code, and verify by computing the first three partial sums by hand that the
 plot is correct. What happens when you increase `range(0, 3)` to, say,
 `range(0, 100)`?
 
-### Exercise D.27
+**Exercise E.27**
 
 Several commands can be used to change how the above figure looks. Try inserting the
 following into the code anywhere after the `import` and before `plt.plot`. What
@@ -215,7 +215,7 @@ figure as a jpg file. Only a limited number of file formats are supported.
 
 ### Visualizing sequences and partial sums stored as lists
 
-**Example D.28**  
+**Example E.28**  
 We now use lists to create and plot the sequence $(1/2^n)_{n=0}^9$.
 
 ```{pyodide-python}
@@ -235,7 +235,7 @@ Explanation:
 - `a` stores the sequence values.
 - `plt.plot(n_values, a, "bo")` plots the points.
 
-**Example D.29**  
+**Example E.29**  
 We now use lists to compute and plot partial sums of
 $$\sum_{k=0}^\infty \frac{1}{2^k}.$$
 
@@ -255,10 +255,10 @@ The key line is the list comprehension:
 `S = [sum(a[0:n + 1]) for n in indices]`. Remember that `a[0:n + 1]` contains the
 entries `a[0], a[1], ..., a[n]`.
 
-### Exercise D.30
+**Exercise E.30**
 
-Implement the code in Example D.29. Verify that it gives the same output as
-Example D.25 when the range in the latter example is suitably adjusted.
+Implement the code in Example E.29. Verify that it gives the same output as
+Example E.25 when the range in the latter example is suitably adjusted.
 
 ### A slightly more advanced example: the Fibonacci sequence
 
@@ -267,7 +267,7 @@ $$1, 1, 2, 3, 5, 8, 13, \dots$$
 and satisfy $a_n = a_{n-1} + a_{n-2}$ for $n \ge 2$ when we set $a_0 = 1$ and
 $a_1 = 1$.
 
-**Example D.31**  
+**Example E.31**  
 The following code can be used to compute Fibonacci numbers.
 
 ```{pyodide-python}
@@ -282,12 +282,12 @@ for n in range(0, 20):
     print("The", n + 1, "th Fibonacci number is", a[n])
 ```
 
-### Exercise D.32
+**Exercise E.32**
 
 Implement the code from the above example. Use a reference (for example, a list of
 Fibonacci numbers) to verify that it gives the correct output.
 
-### Exercise D.33
+**Exercise E.33**
 
 Use the method of the above examples to create a list containing a few partial sums
 of the infinite series $\sum_{k=0}^\infty 1/2^k$.
@@ -297,13 +297,13 @@ of the infinite series $\sum_{k=0}^\infty 1/2^k$.
 # TODO: build a list of partial sums for 1/2**k.
 ```
 
-### Remark D.34 (for-loops versus list comprehensions)
+**Remark R.34 (for-loops versus list comprehensions)**
 
 Pure for-loops are available in most programming languages, while list
 comprehensions are specific to Python. If you want to adapt to other languages,
 use list comprehensions sparingly.
 
-### Remark D.35 (how to time a computation)
+**Remark R.35 (how to time a computation)**
 
 You can measure how long it takes for a program to run. Here is how:
 
@@ -319,7 +319,7 @@ time_elapsed = time.process_time() - time_start
 print(time_elapsed)
 ```
 
-### Exercise D.36
+**Exercise E.36**
 
 Consider the code:
 
@@ -337,7 +337,7 @@ print(S)
    its sum using `sum(a)`.
 3. Use the timing code above to compare which method is fastest.
 
-### Remark D.37
+**Remark R.37**
 
 Python is useful but fairly slow. Built-in commands are usually implemented in
 faster languages (such as C++), so if speed is important, use built-in functions

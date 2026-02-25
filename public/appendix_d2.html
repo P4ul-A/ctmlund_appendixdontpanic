@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.2 Sequences and Sums – ConvertingAppendix</title>
+<title>Appendix A.2 Sequences and Sums – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -477,27 +477,27 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d1.html"> 
-<span class="menu-text">D.1 Introduction</span></a>
+<span class="menu-text">A.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./appendix_d2.html" aria-current="page"> 
-<span class="menu-text">D.2 Sequences and Sums</span></a>
+<span class="menu-text">A.2 Sequences and Sums</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d3.html"> 
-<span class="menu-text">D.3 Control Statements</span></a>
+<span class="menu-text">A.3 Control Statements</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d4.html"> 
-<span class="menu-text">D.4 Functions</span></a>
+<span class="menu-text">A.4 Functions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d5.html"> 
-<span class="menu-text">D.5 Number Representation</span></a>
+<span class="menu-text">A.5 Number Representation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d6.html"> 
-<span class="menu-text">D.6 Answers</span></a>
+<span class="menu-text">A.6 Answers</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -519,25 +519,13 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.2-how-to-compute-and-visualize-sequences-and-sums" id="toc-d.2-how-to-compute-and-visualize-sequences-and-sums" class="nav-link active" data-scroll-target="#d.2-how-to-compute-and-visualize-sequences-and-sums">D.2 How to compute and visualize sequences and sums</a>
+  <li><a href="#a.2-how-to-compute-and-visualize-sequences-and-sums" id="toc-a.2-how-to-compute-and-visualize-sequences-and-sums" class="nav-link active" data-scroll-target="#a.2-how-to-compute-and-visualize-sequences-and-sums">A.2 How to compute and visualize sequences and sums</a>
   <ul class="collapse">
   <li><a href="#some-ways-to-compute-sequences-in-python" id="toc-some-ways-to-compute-sequences-in-python" class="nav-link" data-scroll-target="#some-ways-to-compute-sequences-in-python">Some ways to compute sequences in Python</a></li>
-  <li><a href="#exercise-d.19" id="toc-exercise-d.19" class="nav-link" data-scroll-target="#exercise-d.19">Exercise D.19</a></li>
-  <li><a href="#exercise-d.20" id="toc-exercise-d.20" class="nav-link" data-scroll-target="#exercise-d.20">Exercise D.20</a></li>
   <li><a href="#some-ways-to-compute-partial-sums-of-infinite-series" id="toc-some-ways-to-compute-partial-sums-of-infinite-series" class="nav-link" data-scroll-target="#some-ways-to-compute-partial-sums-of-infinite-series">Some ways to compute partial sums of infinite series</a></li>
-  <li><a href="#exercise-d.23" id="toc-exercise-d.23" class="nav-link" data-scroll-target="#exercise-d.23">Exercise D.23</a></li>
   <li><a href="#how-to-visualize-sequences-and-partial-sums-using-for-loops" id="toc-how-to-visualize-sequences-and-partial-sums-using-for-loops" class="nav-link" data-scroll-target="#how-to-visualize-sequences-and-partial-sums-using-for-loops">How to visualize sequences and partial sums using for-loops</a></li>
-  <li><a href="#exercise-d.26" id="toc-exercise-d.26" class="nav-link" data-scroll-target="#exercise-d.26">Exercise D.26</a></li>
-  <li><a href="#exercise-d.27" id="toc-exercise-d.27" class="nav-link" data-scroll-target="#exercise-d.27">Exercise D.27</a></li>
   <li><a href="#visualizing-sequences-and-partial-sums-stored-as-lists" id="toc-visualizing-sequences-and-partial-sums-stored-as-lists" class="nav-link" data-scroll-target="#visualizing-sequences-and-partial-sums-stored-as-lists">Visualizing sequences and partial sums stored as lists</a></li>
-  <li><a href="#exercise-d.30" id="toc-exercise-d.30" class="nav-link" data-scroll-target="#exercise-d.30">Exercise D.30</a></li>
   <li><a href="#a-slightly-more-advanced-example-the-fibonacci-sequence" id="toc-a-slightly-more-advanced-example-the-fibonacci-sequence" class="nav-link" data-scroll-target="#a-slightly-more-advanced-example-the-fibonacci-sequence">A slightly more advanced example: the Fibonacci sequence</a></li>
-  <li><a href="#exercise-d.32" id="toc-exercise-d.32" class="nav-link" data-scroll-target="#exercise-d.32">Exercise D.32</a></li>
-  <li><a href="#exercise-d.33" id="toc-exercise-d.33" class="nav-link" data-scroll-target="#exercise-d.33">Exercise D.33</a></li>
-  <li><a href="#remark-d.34-for-loops-versus-list-comprehensions" id="toc-remark-d.34-for-loops-versus-list-comprehensions" class="nav-link" data-scroll-target="#remark-d.34-for-loops-versus-list-comprehensions">Remark D.34 (for-loops versus list comprehensions)</a></li>
-  <li><a href="#remark-d.35-how-to-time-a-computation" id="toc-remark-d.35-how-to-time-a-computation" class="nav-link" data-scroll-target="#remark-d.35-how-to-time-a-computation">Remark D.35 (how to time a computation)</a></li>
-  <li><a href="#exercise-d.36" id="toc-exercise-d.36" class="nav-link" data-scroll-target="#exercise-d.36">Exercise D.36</a></li>
-  <li><a href="#remark-d.37" id="toc-remark-d.37" class="nav-link" data-scroll-target="#remark-d.37">Remark D.37</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -557,7 +545,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.2 Sequences and Sums</h1>
+<h1 class="title">Appendix A.2 Sequences and Sums</h1>
 </div>
 
 
@@ -574,51 +562,51 @@ window.Quarto = {
 </header>
 
 
-<p>Appendix D: A crash course in Python<br>
+<p>Appendix A: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.2-how-to-compute-and-visualize-sequences-and-sums" class="level2">
-<h2 class="anchored" data-anchor-id="d.2-how-to-compute-and-visualize-sequences-and-sums">D.2 How to compute and visualize sequences and sums</h2>
+<section id="a.2-how-to-compute-and-visualize-sequences-and-sums" class="level2">
+<h2 class="anchored" data-anchor-id="a.2-how-to-compute-and-visualize-sequences-and-sums">A.2 How to compute and visualize sequences and sums</h2>
 <section id="some-ways-to-compute-sequences-in-python" class="level3">
 <h3 class="anchored" data-anchor-id="some-ways-to-compute-sequences-in-python">Some ways to compute sequences in Python</h3>
 <p>Suppose we want to compute many entries of the sequence <span class="math display">\[\left(\frac{1}{2^k}\right)_{k=0}^\infty = \left(1, \frac{1}{2}, \frac{1}{4}, \dots \right).\]</span></p>
-<p><strong>Example D.17 (Computing sequences using a for-loop)</strong><br>
+<p><strong>Example E.17 (Computing sequences using a for-loop)</strong><br>
 The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qpyodide-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Another way of computing lists is to use a list comprehension. It has the benefit of both computing and storing a sequence of numbers in a single line of code.</p>
-<p><strong>Example D.18 (Computing sequences using a list)</strong><br>
+<p><strong>Example E.18 (Computing sequences using a list)</strong><br>
 The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.19" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.19">Exercise D.19</h3>
+<section id="exercise-e.19" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.19">Exercise E.19</h4>
 <p>Run and compare the output of the codes in the above examples.</p>
 </section>
-<section id="exercise-d.20" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.20">Exercise D.20</h3>
-<p>A difference between the right-most codes in Examples D.17 and D.18 is that in the first, we do not store the values of the sequence anywhere. Here are two suggestions for how to fix this:</p>
+<section id="exercise-e.20" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.20">Exercise E.20</h4>
+<p>A difference between the right-most codes in Examples E.17 and E.18 is that in the first, we do not store the values of the sequence anywhere. Here are two suggestions for how to fix this:</p>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qpyodide-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Explain what is going on in each code. What information is stored at the end of each program? Also, why do these not give any output? Can you fix this?</p>
 </section>
+</section>
 <section id="some-ways-to-compute-partial-sums-of-infinite-series" class="level3">
 <h3 class="anchored" data-anchor-id="some-ways-to-compute-partial-sums-of-infinite-series">Some ways to compute partial sums of infinite series</h3>
 <p>On the previous page, we discussed how to compute and store values of a sequence. Let us now consider how to compute the sum of the first, say, million terms of the infinite series <span class="math display">\[\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.\]</span></p>
-<p><strong>Example D.21 (Computing sums using a for-loop)</strong><br>
+<p><strong>Example E.21 (Computing sums using a for-loop)</strong><br>
 The following two codes both compute the sum <span class="math inline">\(1 + 1/2 + 1/4 + 1/8\)</span>.</p>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div id="qpyodide-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Example D.22 (Computing a sum using lists)</strong><br>
+<p><strong>Example E.22 (Computing a sum using lists)</strong><br>
 The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -627,9 +615,8 @@ The following two codes do exactly the same thing when run.</p>
 <p>Using this technique, we can compute the sum in just one line:</p>
 <div id="qpyodide-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.23" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.23">Exercise D.23</h3>
+<section id="exercise-e.23" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.23">Exercise E.23</h4>
 <ol type="1">
 <li>Run the codes from the examples on this page. Why do they not give any output? Fix this.</li>
 <li>Modify the code so that you can compute the sum of the first million terms or so. What result do you get?</li>
@@ -637,9 +624,10 @@ The following two codes do exactly the same thing when run.</p>
 <div id="qpyodide-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
+</section>
 <section id="how-to-visualize-sequences-and-partial-sums-using-for-loops" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-visualize-sequences-and-partial-sums-using-for-loops">How to visualize sequences and partial sums using for-loops</h3>
-<p><strong>Example D.24</strong><br>
+<p><strong>Example E.24</strong><br>
 The following code is perhaps the simplest way to visualize a sequence in Python. Here, we visualize the sequence <span class="math inline">\((1/2^k)_{k=0}^9\)</span>.</p>
 <div id="qpyodide-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -650,17 +638,16 @@ The following code is perhaps the simplest way to visualize a sequence in Python
 <li><code>plt.show()</code> displays the figure.</li>
 </ul>
 <p>Now modify the code so that we plot partial sums of the infinite series <span class="math display">\[\sum_{k=0}^\infty \frac{1}{2^k}.\]</span></p>
-<p><strong>Example D.25</strong><br>
+<p><strong>Example E.25</strong><br>
 The following code computes and visualizes the partial sums.</p>
 <div id="qpyodide-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.26" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.26">Exercise D.26</h3>
+<section id="exercise-e.26" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.26">Exercise E.26</h4>
 <p>Run this code, and verify by computing the first three partial sums by hand that the plot is correct. What happens when you increase <code>range(0, 3)</code> to, say, <code>range(0, 100)</code>?</p>
 </section>
-<section id="exercise-d.27" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.27">Exercise D.27</h3>
+<section id="exercise-e.27" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.27">Exercise E.27</h4>
 <p>Several commands can be used to change how the above figure looks. Try inserting the following into the code anywhere after the <code>import</code> and before <code>plt.plot</code>. What happens?</p>
 <ul>
 <li>Replace <code>"bo"</code> by <code>"rx"</code>.</li>
@@ -677,9 +664,10 @@ The following code computes and visualizes the partial sums.</p>
 </ul>
 <p>Remark: Note that by choosing the extension <code>.jpg</code>, you tell Python to save your figure as a jpg file. Only a limited number of file formats are supported.</p>
 </section>
+</section>
 <section id="visualizing-sequences-and-partial-sums-stored-as-lists" class="level3">
 <h3 class="anchored" data-anchor-id="visualizing-sequences-and-partial-sums-stored-as-lists">Visualizing sequences and partial sums stored as lists</h3>
-<p><strong>Example D.28</strong><br>
+<p><strong>Example E.28</strong><br>
 We now use lists to create and plot the sequence <span class="math inline">\((1/2^n)_{n=0}^9\)</span>.</p>
 <div id="qpyodide-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -689,46 +677,45 @@ We now use lists to create and plot the sequence <span class="math inline">\((1/
 <li><code>a</code> stores the sequence values.</li>
 <li><code>plt.plot(n_values, a, "bo")</code> plots the points.</li>
 </ul>
-<p><strong>Example D.29</strong><br>
+<p><strong>Example E.29</strong><br>
 We now use lists to compute and plot partial sums of <span class="math display">\[\sum_{k=0}^\infty \frac{1}{2^k}.\]</span></p>
 <div id="qpyodide-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The key line is the list comprehension: <code>S = [sum(a[0:n + 1]) for n in indices]</code>. Remember that <code>a[0:n + 1]</code> contains the entries <code>a[0], a[1], ..., a[n]</code>.</p>
+<section id="exercise-e.30" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.30">Exercise E.30</h4>
+<p>Implement the code in Example E.29. Verify that it gives the same output as Example E.25 when the range in the latter example is suitably adjusted.</p>
 </section>
-<section id="exercise-d.30" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.30">Exercise D.30</h3>
-<p>Implement the code in Example D.29. Verify that it gives the same output as Example D.25 when the range in the latter example is suitably adjusted.</p>
 </section>
 <section id="a-slightly-more-advanced-example-the-fibonacci-sequence" class="level3">
 <h3 class="anchored" data-anchor-id="a-slightly-more-advanced-example-the-fibonacci-sequence">A slightly more advanced example: the Fibonacci sequence</h3>
 <p>The Fibonacci numbers are <span class="math display">\[1, 1, 2, 3, 5, 8, 13, \dots\]</span> and satisfy <span class="math inline">\(a_n = a_{n-1} + a_{n-2}\)</span> for <span class="math inline">\(n \ge 2\)</span> when we set <span class="math inline">\(a_0 = 1\)</span> and <span class="math inline">\(a_1 = 1\)</span>.</p>
-<p><strong>Example D.31</strong><br>
+<p><strong>Example E.31</strong><br>
 The following code can be used to compute Fibonacci numbers.</p>
 <div id="qpyodide-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.32" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.32">Exercise D.32</h3>
+<section id="exercise-e.32" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.32">Exercise E.32</h4>
 <p>Implement the code from the above example. Use a reference (for example, a list of Fibonacci numbers) to verify that it gives the correct output.</p>
 </section>
-<section id="exercise-d.33" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.33">Exercise D.33</h3>
+<section id="exercise-e.33" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.33">Exercise E.33</h4>
 <p>Use the method of the above examples to create a list containing a few partial sums of the infinite series <span class="math inline">\(\sum_{k=0}^\infty 1/2^k\)</span>.</p>
 <div id="qpyodide-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="remark-d.34-for-loops-versus-list-comprehensions" class="level3">
-<h3 class="anchored" data-anchor-id="remark-d.34-for-loops-versus-list-comprehensions">Remark D.34 (for-loops versus list comprehensions)</h3>
+<section id="remark-r.34-for-loops-versus-list-comprehensions" class="level4">
+<h4 class="anchored" data-anchor-id="remark-r.34-for-loops-versus-list-comprehensions">Remark R.34 (for-loops versus list comprehensions)</h4>
 <p>Pure for-loops are available in most programming languages, while list comprehensions are specific to Python. If you want to adapt to other languages, use list comprehensions sparingly.</p>
 </section>
-<section id="remark-d.35-how-to-time-a-computation" class="level3">
-<h3 class="anchored" data-anchor-id="remark-d.35-how-to-time-a-computation">Remark D.35 (how to time a computation)</h3>
+<section id="remark-r.35-how-to-time-a-computation" class="level4">
+<h4 class="anchored" data-anchor-id="remark-r.35-how-to-time-a-computation">Remark R.35 (how to time a computation)</h4>
 <p>You can measure how long it takes for a program to run. Here is how:</p>
 <div id="qpyodide-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="exercise-d.36" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.36">Exercise D.36</h3>
+<section id="exercise-e.36" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.36">Exercise E.36</h4>
 <p>Consider the code:</p>
 <div id="qpyodide-insertion-location-20"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -738,11 +725,12 @@ The following code can be used to compute Fibonacci numbers.</p>
 <li>Use the timing code above to compare which method is fastest.</li>
 </ol>
 </section>
-<section id="remark-d.37" class="level3">
-<h3 class="anchored" data-anchor-id="remark-d.37">Remark D.37</h3>
+<section id="remark-r.37" class="level4">
+<h4 class="anchored" data-anchor-id="remark-r.37">Remark R.37</h4>
 <p>Python is useful but fairly slow. Built-in commands are usually implemented in faster languages (such as C++), so if speed is important, use built-in functions as much as possible.</p>
 
 
+</section>
 </section>
 </section>
 

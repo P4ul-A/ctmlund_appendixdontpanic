@@ -1,0 +1,1610 @@
+---
+title: "Appendix A (All)"
+format: html
+filters:
+  - pyodide
+---
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.1 Introduction
+
+### How to install Python 3 and write your first program
+
+Go to <https://www.spyder-ide.org> and download and install the latest version of Spyder.  
+Once installed, launch the program.
+
+::: {.callout-note}
+Figure omitted in this web version.
+:::
+
+**Exercise E.1**
+
+Type `print("Hello world")` in the editor window and press the green play button.  
+What output do you get? Also try `print("2+2=", 2+2)`.
+
+```{pyodide-python}
+#| read-only: false
+print("Hello world")
+print("2+2=", 2 + 2)
+```
+
+::: {.callout-note}
+**Remark.** Python treats `"2+2"` as text to be printed, and `2+2` as something to be
+computed. A comma is used to separate different types of input to `print`.
+:::
+
+### A first look at basic syntax for arithmetic in Python
+
+We now consider how to do basic arithmetic in Python.
+
+**Example E.2** Enter the following code into the Spyder editor.
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+c = a + b
+print("a+b=", c)
+```
+
+When you press the green play button you get the output `a+b=6`.
+
+Here, `a`, `b`, and `c` are variables. Technically speaking, a variable is a space in
+the memory of the computer which can store one piece of information, such as a
+number.
+
+**Example E.3** Enter the following code into the Spyder editor.
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+c = a + b
+a = 10
+print("a+b=", c)
+```
+
+When you press the green play button you still get the output `a+b=6`.
+
+Line-by-line explanation of Example E.2:
+
+1. Python creates a variable `a` and assigns it the value `2`.
+2. Python creates a variable `b` and assigns it the value `4`.
+3. Python creates a variable `c`, computes `a + b`, and assigns this value to `c`.
+4. Python prints the value of `c` on the screen (together with the string `"a+b="`).
+
+The above example illustrates several peculiarities of arithmetic in Python and how
+a code is run:
+
+1. The code is executed line by line.
+2. Expressions such as `a = b` should be read from right to left. That is, `a` is
+   assigned whatever value `b` has, but not vice versa.
+3. If a variable gets assigned some value, it has no memory of how that happened.
+   Changing `a` later does not affect the value stored in `c`.
+
+**Exercise E.4**
+
+Explore the various ways to do arithmetic operations in Python by running the
+following commands for suitable values of `a` and `b`:
+
+`a + b`, `a * b`, `a - b`, `a - -b`, `a / b`, `a // b`, `a % b`.
+
+```{pyodide-python}
+#| read-only: false
+a = 7
+b = 3
+
+print("a + b =", a + b)
+print("a * b =", a * b)
+print("a - b =", a - b)
+print("a - -b =", a - -b)
+print("a / b =", a / b)
+print("a // b =", a // b)
+print("a % b =", a % b)
+```
+
+### Basic rules for variable names
+
+We now turn to a discussion of the basic syntax in Python. First, the types of names
+you are allowed to give a variable.
+
+**Example E.5** You can give variables much more interesting names than just
+`a`, `b`, `x`, or `y`. Here is an example:
+
+```{pyodide-python}
+#| read-only: false
+ponies = 2
+cookies = 4
+pony_Cookie32 = ponies + cookies
+print(pony_Cookie32)
+```
+
+We make the following remarks:
+
+4. Python is case sensitive. This means that `n` and `N` are as different as `n` and `m`.
+5. By tradition, the name of a variable should never start with an upper case letter.
+6. A variable cannot be given a numerical name such as `2` or `34`.
+   Numbers can be part of the name of a variable, as long as the name starts with a
+   letter or an underscore `_`. Certain special symbols, such as `$`, `#`, and `%`,
+   can never be used in the name of a variable.
+7. The name of a variable cannot contain a space.
+8. You should not give a variable a name that already means something different.
+   For instance, do not give a variable the name `print` (however, `Print` is fine).
+
+### Indentation, line breaks, and comments
+
+**Example E.6** In Python, we need to be careful with how we place indentations.
+For instance, both of the following programs will crash:
+
+```python
+a = 2
+b = 4
+    c = a + b
+print(c)
+```
+
+```python
+a = 2
+b = 4
+c = a + b
+  print(c)
+```
+
+9. Python is careful with indentation. If Python does not understand why we make
+   some indentation, it will crash.
+10. Later in this chapter, we will see situations where indentations become a natural
+    part of the code (for loops, while loops, if-else structures, and functions).
+
+**Example E.7** In contrast to the situation with indentations, Python is much less
+sensitive with respect to whether or not we skip a line. The following code runs just
+fine:
+
+```{pyodide-python}
+#| read-only: false
+a = 2; b = 4  # Two commands on the same line.
+c = (a + b) - 3  # Here we use soft parentheses.
+
+print(c)
+```
+
+11. Python does not care if you skip a line, or twenty.
+12. You can place multiple commands on the same line, as long as they are separated
+    by a semicolon `;`.
+13. Everything you write on a line following a hashtag `#` is ignored by Python.
+14. You can use "soft" parentheses `(` and `)` just as you would in a normal
+    computation. You cannot replace them with `[` `]` or `{` `}`.
+
+15. It is a good thing for a program to crash. It is a way for Python to let you know
+    that the result would probably have been false because the code was written in
+    a bad way.
+
+**Exercise E.8**
+
+Will the following codes run? If not, why? If yes, what is the output?
+
+**(a)**
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+6 = a + b
+print(a + b)
+```
+
+**(b)**
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+a = a + b
+print(a)
+```
+
+**(c)**
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+a = b
+print(b)
+```
+
+**(d)**
+
+```{pyodide-python}
+#| read-only: false
+a = 2
+b = 4
+c = a + b
+print(c)
+```
+
+**(e)**
+
+```{pyodide-python}
+#| read-only: false
+a = 2; b = 4; a = a + b
+
+print(b)
+```
+
+**(f)**
+
+```{pyodide-python}
+#| read-only: false
+Ponies = 2
+Cookies = 4
+Rainbows = ponies + cookies
+print(rainbows)
+```
+
+**Exercise E.9**
+
+Consider the following codes. Can you express mathematically what they compute?
+
+**(a)**
+
+```{pyodide-python}
+#| read-only: false
+a = 1
+a = a + 1/2
+a = a + 1/4
+a = a + 1/8
+a = a + 1/16
+
+print(a)
+```
+
+**(b)**
+
+```{pyodide-python}
+#| read-only: false
+a = 1
+a = 1/(1 + a)
+a = 1/(1 + a)
+a = 1/(1 + a)
+a = 1/(1 + a)
+
+print(a)
+```
+
+Hint: You have already seen these objects on page 87.
+
+### A first look at how to efficiently repeat commands in Python
+
+In Exercise E.9 above, you were asked to consider a code where an operation was
+repeated multiple times. We now explain one way this can be done using a `for` loop.
+
+**Example E.10 (For-loop)** The following two codes do exactly the same thing when
+run.
+
+```{pyodide-python}
+#| read-only: false
+a = 0
+print(a)
+a = 1
+print(a)
+a = 2
+print(a)
+a = 3
+print(a)
+print("the end!")
+```
+
+```{pyodide-python}
+#| read-only: false
+for n in range(0, 4):
+    a = n
+    print(a)
+print("the end!")
+```
+
+Explanation of the `for` loop:
+
+1. `for n in range(0, 4)` means the block below is repeated for each `n` between
+   `0` and `3` (but not `4`).
+2. The indented lines are run by the loop. The loop first runs with `n = 0`, then
+   `n = 1`, and so on until `n = 3`.
+3. After the loop ends, Python moves on to the first unindented line following it.
+
+**Exercise E.11**
+
+Will these codes run? If so, what are their outputs?
+
+**(a)**
+
+```{pyodide-python}
+#| read-only: false
+for n in range(0, 4):
+    print(n)
+print("mississippi")
+print("hello")
+```
+
+**(b)**
+
+```{pyodide-python}
+#| read-only: false
+for n in range(0, 4):
+    print(n)
+    print("mississippi")
+print("hello")
+```
+
+**Exercise E.12**
+
+Rewrite the code in Exercise E.9 using `for` loops.
+
+```{pyodide-python}
+#| read-only: false
+# (a) Rebuild the sum 1 + 1/2 + 1/4 + 1/8 + 1/16 using a for-loop.
+a = 1
+
+# TODO: update a inside a for-loop
+
+print("Result for (a):", a)
+```
+
+```{pyodide-python}
+#| read-only: false
+# (b) Rebuild the repeated fraction using a for-loop.
+a = 1
+
+# TODO: update a inside a for-loop
+
+print("Result for (b):", a)
+```
+
+### Some words on datatypes in Python
+
+Python stores variables in different ways depending on whether they contain text,
+numbers, or lists. We say that Python uses different datatypes. For instance, Python
+will treat a number differently depending on whether or not it is an integer.
+
+**Example E.13**
+
+```{pyodide-python}
+#| read-only: false
+a = 2  # Here we store the value 2 as an integer.
+print(type(a))  # Prints: <class 'int'>
+```
+
+**Exercise E.14**
+
+1. Check the type of the variable defined by `b = 3/2`.
+2. Check the type of the variable defined by `c = 4/2`.
+
+```{pyodide-python}
+#| read-only: false
+b = 3/2
+c = 4/2
+
+print("type(b) =", type(b))
+print("type(c) =", type(c))
+```
+
+In addition to integers and floating point numbers, we will encounter the following
+datatypes in this chapter:
+
+- **String**: a variable containing text, e.g. `a = "Hej"`.
+- **List**: a variable containing a list of other variables, e.g. `a = [2, 3/2, "Hej"]`.
+- **Numpy array**: a special type of list that can only contain integers or floating
+  point numbers (and has more advanced features).
+
+### How to store and manipulate sequences using Python lists
+
+One way of storing sequences in Python is by using lists.
+
+**Example E.16**
+
+```{pyodide-python}
+#| read-only: false
+a = [0, 1, 2, 3, 4, 5]  # list of integers
+b = ["cheese", 88]  # list of a string and an ice cream
+
+print(a)       # prints the entire list
+print(a[0])    # prints 1st entry
+print(a[3])    # prints 4th entry
+print(a[-1])   # prints last entry
+print(a[-2])   # prints second to last entry
+
+print("len(a) =", len(a))  # length of the list
+print("sum(a) =", sum(a))  # sum of entries
+print("max(a) =", max(a))  # largest entry
+print("min(a) =", min(a))  # smallest entry
+
+a.append("oi")  # add entry "oi" to the end of the list
+a.pop(3)  # delete the 4th entry in the list
+
+c = a + b  # concatenation
+d = b * 2  # repetition
+
+e = a[2:5]    # slice: entries 2, 3, 4
+f = a[2:]     # slice from index 2 to the end
+g = a[:5]     # slice from start to index 4
+h = a[1:4:2]  # every second entry between indices 1 and 3
+
+print("c =", c)
+print("d =", d)
+print("e =", e)
+print("f =", f)
+print("g =", g)
+print("h =", h)
+```
+
+The code is more or less explained by the comments, but we note:
+
+1. Use square brackets `[` `]` to create a list and commas `,` to separate entries.
+2. Writing `a[3] = 10` changes an entry in the list.
+3. `len`, `sum`, `max`, and `min` work only if the list contains numbers.
+4. Lists are easy to modify with `append`, `pop`, concatenation, and slicing.
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.2 How to compute and visualize sequences and sums
+
+### Some ways to compute sequences in Python
+
+Suppose we want to compute many entries of the sequence
+$$\left(\frac{1}{2^k}\right)_{k=0}^\infty = \left(1, \frac{1}{2}, \frac{1}{4}, \dots \right).$$
+
+**Example E.17 (Computing sequences using a for-loop)**  
+The following two codes do exactly the same thing when run.
+
+```{pyodide-python}
+#| read-only: false
+print(1 / 2**0)
+print(1 / 2**1)
+print(1 / 2**2)
+```
+
+```{pyodide-python}
+#| read-only: false
+for k in range(0, 3):
+    print(1 / 2**k)
+```
+
+Another way of computing lists is to use a list comprehension. It has the benefit of
+both computing and storing a sequence of numbers in a single line of code.
+
+**Example E.18 (Computing sequences using a list)**  
+The following two codes do exactly the same thing when run.
+
+```{pyodide-python}
+#| read-only: false
+a = [1 / 2**0, 1 / 2**1, 1 / 2**2]
+print(a)
+```
+
+```{pyodide-python}
+#| read-only: false
+a = [1 / 2**k for k in range(0, 3)]
+print(a)
+```
+
+**Exercise E.19**
+
+Run and compare the output of the codes in the above examples.
+
+**Exercise E.20**
+
+A difference between the right-most codes in Examples E.17 and E.18 is that in the
+first, we do not store the values of the sequence anywhere. Here are two suggestions
+for how to fix this:
+
+```{pyodide-python}
+#| read-only: false
+a = 0
+for k in range(0, 3):
+    a = 1 / 2**k
+
+# TODO: print something useful here.
+```
+
+```{pyodide-python}
+#| read-only: false
+a = []
+for k in range(0, 3):
+    a.append(1 / 2**k)
+
+# TODO: print something useful here.
+```
+
+Explain what is going on in each code. What information is stored at the end of each
+program? Also, why do these not give any output? Can you fix this?
+
+### Some ways to compute partial sums of infinite series
+
+On the previous page, we discussed how to compute and store values of a sequence.
+Let us now consider how to compute the sum of the first, say, million terms of the
+infinite series
+$$\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.$$
+
+**Example E.21 (Computing sums using a for-loop)**  
+The following two codes both compute the sum $1 + 1/2 + 1/4 + 1/8$.
+
+```{pyodide-python}
+#| read-only: false
+a = 0
+a = a + 1 / 2**0
+a = a + 1 / 2**1
+a = a + 1 / 2**2
+```
+
+```{pyodide-python}
+#| read-only: false
+a = 0
+for k in range(0, 3):
+    a = a + 1 / 2**k
+```
+
+**Example E.22 (Computing a sum using lists)**  
+The following two codes do exactly the same thing when run.
+
+```{pyodide-python}
+#| read-only: false
+a = [1 / 2**0, 1 / 2**1, 1 / 2**2]
+b = sum(a)
+```
+
+```{pyodide-python}
+#| read-only: false
+a = [1 / 2**k for k in range(0, 3)]
+b = sum(a)
+```
+
+Using this technique, we can compute the sum in just one line:
+
+```{pyodide-python}
+#| read-only: false
+b = sum([1 / 2**k for k in range(0, 3)])
+```
+
+**Exercise E.23**
+
+1. Run the codes from the examples on this page. Why do they not give any output?
+   Fix this.
+2. Modify the code so that you can compute the sum of the first million terms or so.
+   What result do you get?
+
+```{pyodide-python}
+#| read-only: false
+# TODO: compute a partial sum for a large N and print the result.
+N = 10**6
+s = 0.0
+for k in range(0, N):
+    s += 1 / 2**k
+
+# TODO: print the result.
+```
+
+### How to visualize sequences and partial sums using for-loops
+
+**Example E.24**  
+The following code is perhaps the simplest way to visualize a sequence in Python.
+Here, we visualize the sequence $(1/2^k)_{k=0}^9$.
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+for k in range(0, 10):
+    plt.plot(k, 1 / 2**k, "bo")
+
+plt.show()
+```
+
+Explanation:
+
+- `matplotlib.pyplot` provides plotting commands.
+- The `for` loop plots a blue dot at $(k, 1/2^k)$ for each `k`.
+- `plt.show()` displays the figure.
+
+Now modify the code so that we plot partial sums of the infinite series
+$$\sum_{k=0}^\infty \frac{1}{2^k}.$$
+
+**Example E.25**  
+The following code computes and visualizes the partial sums.
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+a = 0
+for k in range(0, 3):
+    a = a + 1 / 2**k
+    plt.plot(k, a, "bo")
+
+plt.show()
+```
+
+**Exercise E.26**
+
+Run this code, and verify by computing the first three partial sums by hand that the
+plot is correct. What happens when you increase `range(0, 3)` to, say,
+`range(0, 100)`?
+
+**Exercise E.27**
+
+Several commands can be used to change how the above figure looks. Try inserting the
+following into the code anywhere after the `import` and before `plt.plot`. What
+happens?
+
+- Replace `"bo"` by `"rx"`.
+- `plt.xlim(-3, 15)`
+- `plt.ylim(-5, 2)`
+- `plt.xlabel("There was")`
+- `plt.ylabel("a graph")`
+- `plt.title("that had a title")`
+- `plt.xticks([-2, 0, 3, 4, 6.5, 10])`
+- `plt.yticks([0, 1, 1.5])`
+- `plt.grid(True)`
+- `plt.figure(figsize=(4, 3))`
+- `plt.savefig("myfigure.jpg")`
+
+Remark: Note that by choosing the extension `.jpg`, you tell Python to save your
+figure as a jpg file. Only a limited number of file formats are supported.
+
+### Visualizing sequences and partial sums stored as lists
+
+**Example E.28**  
+We now use lists to create and plot the sequence $(1/2^n)_{n=0}^9$.
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+n_values = [n for n in range(0, 10)]
+a = [1 / 2**n for n in n_values]
+
+plt.plot(n_values, a, "bo")
+plt.show()
+```
+
+Explanation:
+
+- `n_values` gives the x-axis values.
+- `a` stores the sequence values.
+- `plt.plot(n_values, a, "bo")` plots the points.
+
+**Example E.29**  
+We now use lists to compute and plot partial sums of
+$$\sum_{k=0}^\infty \frac{1}{2^k}.$$
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+indices = [i for i in range(0, 20)]
+a = [1 / 2**k for k in indices]
+S = [sum(a[0:n + 1]) for n in indices]
+
+plt.plot(indices, S, "bo")
+plt.show()
+```
+
+The key line is the list comprehension:
+`S = [sum(a[0:n + 1]) for n in indices]`. Remember that `a[0:n + 1]` contains the
+entries `a[0], a[1], ..., a[n]`.
+
+**Exercise E.30**
+
+Implement the code in Example E.29. Verify that it gives the same output as
+Example E.25 when the range in the latter example is suitably adjusted.
+
+### A slightly more advanced example: the Fibonacci sequence
+
+The Fibonacci numbers are
+$$1, 1, 2, 3, 5, 8, 13, \dots$$
+and satisfy $a_n = a_{n-1} + a_{n-2}$ for $n \ge 2$ when we set $a_0 = 1$ and
+$a_1 = 1$.
+
+**Example E.31**  
+The following code can be used to compute Fibonacci numbers.
+
+```{pyodide-python}
+#| read-only: false
+a = [1, 1]
+
+for n in range(2, 20):
+    new_term = a[n - 1] + a[n - 2]
+    a.append(new_term)
+
+for n in range(0, 20):
+    print("The", n + 1, "th Fibonacci number is", a[n])
+```
+
+**Exercise E.32**
+
+Implement the code from the above example. Use a reference (for example, a list of
+Fibonacci numbers) to verify that it gives the correct output.
+
+**Exercise E.33**
+
+Use the method of the above examples to create a list containing a few partial sums
+of the infinite series $\sum_{k=0}^\infty 1/2^k$.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: build a list of partial sums for 1/2**k.
+```
+
+**Remark R.34 (for-loops versus list comprehensions)**
+
+Pure for-loops are available in most programming languages, while list
+comprehensions are specific to Python. If you want to adapt to other languages,
+use list comprehensions sparingly.
+
+**Remark R.35 (how to time a computation)**
+
+You can measure how long it takes for a program to run. Here is how:
+
+```{pyodide-python}
+#| read-only: false
+import time
+
+time_start = time.process_time()
+
+# Your code here
+
+time_elapsed = time.process_time() - time_start
+print(time_elapsed)
+```
+
+**Exercise E.36**
+
+Consider the code:
+
+```{pyodide-python}
+#| read-only: false
+S = 0
+for n in range(1, 100000):
+    S = S + 1 / n
+
+print(S)
+```
+
+1. What does the code compute?
+2. Do the same as in (1), except by first creating a sequence `a` and then computing
+   its sum using `sum(a)`.
+3. Use the timing code above to compare which method is fastest.
+
+**Remark R.37**
+
+Python is useful but fairly slow. Built-in commands are usually implemented in
+faster languages (such as C++), so if speed is important, use built-in functions
+as much as possible.
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.3 Some additional control statements in Python
+
+### While-loops
+
+The while-loop is a close cousin of the for-loop. In most cases, what you can do with
+one of them, you can also do with the other. The point is that in most situations,
+one of them will usually be much easier to use than the other.
+
+**Example E.38 (Partial sums with a while-loop)**  
+The following code computes the sum
+$$\sum_{n=1}^{10} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{10}.$$
+
+```{pyodide-python}
+#| read-only: false
+S = 0
+n = 1
+while n <= 10:
+    S = S + 1 / n
+    n = n + 1
+
+print(S)
+```
+
+Explanation:
+
+1. We initialize `S` and `n`.
+2. The loop continues while `n <= 10`.
+3. We must update `n` manually inside the loop.
+
+**Remark R.39 (Logical operators)**  
+In the above example, we used `<=`. The logical operators `>=`, `==`, and `!=` are
+also useful. Note that `==` checks equality and `!=` checks inequality.
+
+**Exercise E.40**
+
+Use a while-loop to check how large `n` has to be for the partial sums
+$$S_n = \sum_{k=0}^n \frac{1}{2^k}$$
+to be closer to `2` than `1/10000`.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: find the smallest n such that 2 - S_n < 1/10000.
+```
+
+### If-else statements
+
+Alongside for- and while-loops, the if-else statement is the most important tool in
+programming.
+
+**Example E.41 (if-statements in Python)**
+
+```{pyodide-python}
+#| read-only: false
+a = 10
+
+if a >= 3:
+    print("a is a BIG number")
+else:
+    print("a is a tiny number")
+```
+
+If you want to add more conditions, you can use `elif` and combine conditions using
+`and` or `or`.
+
+**Example E.42**
+
+```{pyodide-python}
+#| read-only: false
+a = 10
+
+if a >= 3:
+    print("a is a BIG number")
+elif a > -3 and a < 3:
+    print("a is a tiny number")
+elif a <= -3:
+    print("a is a BIG but negative number")
+```
+
+**Exercise E.43**
+
+Use an if-type statement to modify the code from Example E.31 (Fibonacci numbers)
+so that `1th`, `2th`, and `3th` are replaced by `1st`, `2nd`, and `3rd`.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement the suffix fix inside a loop that prints Fibonacci numbers.
+```
+
+### The break command
+
+The `break` command tells Python to stop the nearest loop and to continue the program
+on the first unindented line below it.
+
+**Example E.44**  
+The following code does exactly the same as the one in Example E.38.
+
+```{pyodide-python}
+#| read-only: false
+S = 0
+for n in range(1, 1000):
+    if n > 10:
+        break
+    S = S + 1 / n
+
+print(S)
+```
+
+**Remark R.45**  
+If you have nested loops, `break` only stops the inner-most loop.
+
+**Exercise E.46**
+
+Consider the list:
+
+```{pyodide-python}
+#| read-only: false
+my_list = [n / (1 + n**2) for n in range(0, 10**6)]
+```
+
+1. Write a code that combines a for-loop with the break command to check when the
+   first entry in the list is smaller than `1e-4`.
+2. Do the same as in (1), but with a while-loop and no break command.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement part (a) with break.
+```
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement part (b) with a while-loop.
+```
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.4 Functions in Python
+
+### How to define a function in Python
+
+**Example E.47 (Defining functions in Python)**  
+In the following code we define $f(x) = x^2 - 5x + 4$ in Python and compute $f(3)$.
+
+```{pyodide-python}
+#| read-only: false
+def f(x):
+    y = x**2 - 5 * x + 4
+    return y
+
+z = f(3)
+print(z)
+```
+
+Explanation:
+
+1. `def f(x):` tells Python that a function named `f` is being defined.
+2. The `return` value is the output of the function.
+3. When we write `f(3)`, the function code is run with `x = 3`.
+
+**Exercise E.48**
+
+1. Use the if-control statement to implement the absolute value function. Use it on
+   a few values to check that it works.
+2. Implement the absolute value function without using the if-control statement.
+
+Remark: It is not really necessary to program the absolute value function by hand
+since it already exists in Python as `abs(x)`.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement absolute value with if.
+```
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement absolute value without if.
+```
+
+**Exercise E.49**
+
+Write the code for a function that will take a list of numbers as input and return
+their product as output. This is analogous to the built-in function `sum()` which
+returns the sum.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: implement a product function.
+```
+
+### Warning: the importance of local namespaces
+
+Variables created inside a function are local and cannot be accessed outside the
+function. This is a common source of bugs.
+
+**Example E.50**  
+The following code makes no sense and will crash.
+
+```{pyodide-python}
+#| read-only: false
+x = 3
+
+def f(x):
+    y = x**2 - 5 * x + 4
+    return y
+
+print(y)
+```
+
+**Example E.51**  
+The following code also crashes.
+
+```{pyodide-python}
+#| read-only: false
+x = 3
+
+def f(x):
+    y = x**2 - 5 * x + 4
+    return y
+
+f(x)
+print(y)
+```
+
+The variable `y` only exists inside the function definition. After the function
+returns, local variables are deleted.
+
+**Example E.52**  
+Thanks to local namespaces, we can be sure that the following code works:
+
+```{pyodide-python}
+#| read-only: false
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = sum(a)
+print(b)
+```
+
+### How to plot functions in Python using lists
+
+**Example E.53 (Plotting with datatype list)**  
+The following code plots $f(x) = x^2 + 2x + 3$ over the interval $[0, 1]$.
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+def f(x):
+    y = x**2 + 2 * x + 3
+    return y
+
+X = [n / 10 for n in range(0, 11)]
+Y = [f(x) for x in X]
+
+plt.plot(X, Y)
+plt.show()
+```
+
+The command `plt.plot(X, Y)` connects the points with straight line segments. If you
+use `plt.plot(X, Y, "bo")` you will get blue dots instead of a line.
+
+**Exercise E.54**
+
+Plot the functions you implemented in Exercise E.48 on $[1/2, 2]$.
+
+```{pyodide-python}
+#| read-only: false
+# TODO: plot your absolute value functions on [1/2, 2].
+```
+
+**Exercise E.55**
+
+Consider the following code:
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+N = 10**4
+
+def a(k):
+    return 1 / 2**k
+
+def S(a_func, n):
+    return sum([a_func(k) for k in range(0, n)])
+
+n_values = [n for n in range(0, N)]
+Y = [S(a, n) for n in n_values]
+
+plt.plot(n_values, Y, "bo")
+```
+
+1. Explain in mathematical terms what this code does.
+2. The symbol `a` takes more than one role in the above code. Explain what roles
+   these are.
+3. Make the code easier to read by giving `a` different names where possible.
+
+### Plotting functions using numpy arrays
+
+Numpy arrays are like lists, but restricted to numeric entries. This makes it possible
+to do fast, element-wise operations.
+
+**Example E.56 (Features of numpy arrays)**
+
+```{pyodide-python}
+#| read-only: false
+import numpy as np
+
+def f(x):
+    return x**2
+
+a = [1, 2, 3, 4]
+b = [1, 2, 5, 3]
+
+A = np.array(a)
+B = np.array(b)
+
+C = A - B
+D = A + B
+E = A / B
+
+F = np.zeros(3)
+G = np.ones(4)
+H = np.arange(4)
+I = np.linspace(0, 1, 5)
+
+J = I.tolist()
+K = f(A)
+
+print("A =", A)
+print("B =", B)
+print("C =", C)
+print("D =", D)
+print("E =", E)
+print("F =", F)
+print("G =", G)
+print("H =", H)
+print("I =", I)
+print("J =", J)
+print("K =", K)
+```
+
+Notes:
+
+- `np.linspace(a, b, N)` creates `N` equally spaced points in `[a, b]`.
+- Applying a function to an array is done element-wise.
+
+**Example E.57**  
+The following code gives exactly the same output as Example E.53.
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+import numpy as np
+
+def f(x):
+    y = x**2 + 2 * x + 3
+    return y
+
+X = np.linspace(0, 1, 11)
+Y = f(X)
+
+plt.plot(X, Y)
+plt.show()
+```
+
+**Exercise E.58**
+
+Try to use numpy arrays to plot the functions from Exercise E.48. For one of them,
+the code will not work. Can you imagine why?
+
+### Predefined functions in Python
+
+**Remark R.59 (Built-in functions in Python)**  
+Here is a list of some functions that are built into Python:
+
+- `abs(x)` computes the absolute value of `x`.
+- `complex(a, b)` returns the complex number `a + ib`.
+- `float(x)` converts an integer to a float.
+- `int(x)` converts a float to an integer (rounds down).
+- `round(a, n)` rounds the floating point number `a` to `n` digits.
+- `type(x)` returns the datatype of the variable `x`.
+
+For a full list, see <https://docs.python.org/3/library/functions.html>.
+
+**Remark R.60 (Functions in the numpy package)**  
+To use these functions, start your code with `import numpy as np`.
+
+- `np.exp(x)` exponential function
+- `np.log(x)` natural log
+- `np.log2(x)` log base 2
+- `np.log10(x)` log base 10
+- `np.sin(x)` sine (radians)
+- `np.cos(x)` cosine (radians)
+- `np.tan(x)` tangent (radians)
+- `np.arcsin(x)` arcsine
+- `np.arccos(x)` arccosine
+- `np.arctan(x)` arctangent
+- `np.absolute(x)` absolute value
+- `np.deg2rad(x)` degrees to radians
+- `np.rad2deg(x)` radians to degrees
+- `np.sum(x)` sum of elements
+- `np.prod(x)` product of elements
+- `np.imag(z)` imaginary part
+- `np.real(z)` real part
+- `np.angle(z)` angle of a complex number (radians)
+- `np.conj(z)` complex conjugate
+
+Some constants:
+
+- `np.pi`
+- `np.e`
+
+More info: <https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html>
+
+**Example E.61**
+
+```{pyodide-python}
+#| read-only: false
+import numpy as np
+
+y = np.sin(np.pi)
+print(y)
+```
+
+There are other packages with even more functions, such as `math` and `scipy`. In
+particular, `numpy` makes the `math` package mostly obsolete when working with
+numpy arrays.
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.5 How numbers are represented in Python
+
+We end this appendix by examining how numbers are represented in Python and some
+peculiar consequences of this.
+
+**Example E.62**
+
+At the start of Chapter 3, we considered the infinite series
+$$\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.$$
+
+Let $S_n$ denote the $n$th partial sum. The point is that $2 - S_n = 1/2^n$, so
+$S_n \ne 2$. But if we ask Python to compute, say, $S_{100}$, it returns `2`.
+
+```{pyodide-python}
+#| read-only: false
+S = 0.0
+for k in range(0, 101):
+    S += 1 / 2**k
+
+print("S_100 =", S)
+```
+
+**Exercise E.63**
+
+Does Python really mean that $S_{100} = 2$, or is there something else going on?
+One way to double check is to ask Python to compute $1 / (2 - S_{100})$.
+
+```{pyodide-python}
+#| read-only: false
+S = 0.0
+for k in range(0, 101):
+    S += 1 / 2**k
+
+print(1 / (2 - S))
+```
+
+### How integers are represented in Python
+
+If we run
+
+```{pyodide-python}
+#| read-only: false
+my_number = 8
+```
+
+Python stores the integer using a fixed number of bits (modern computers typically
+use 64 bits for integers).
+
+::: {.callout-note}
+Figures omitted in this web version.
+:::
+
+**Example E.65 (Decimal and binary notation)**  
+In decimal:
+$$4132 = 4\cdot10^3 + 1\cdot10^2 + 3\cdot10^1 + 2\cdot10^0.$$
+
+In binary:
+$$1101_2 = 1\cdot2^3 + 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0.$$
+
+If it is not clear whether a number is written in binary or decimal, we can use the
+notations $(1101)_2$ and $(1101)_{10}$.
+
+Counting in binary:
+$(0)_2=0$, $(1)_2=1$, $(10)_2=2$, $(11)_2=3$, $(100)_2=4$, $(101)_2=5$,
+$(110)_2=6$, $(111)_2=7$, $(1000)_2=8$, and so on.
+
+**Exercise E.66**
+
+Check that the above list is correct, and continue the list to 20.
+
+**Exercise E.68**
+
+1. What is the largest integer you can represent as an 8-bit integer?
+2. Modern computers use 64-bit integers, where 1 bit is used for the sign and 63
+   for the number itself. What is the largest integer you can represent using a
+   64-bit integer?
+
+**Remark R.69 (Two's complement)**  
+Our explanation above is correct for positive integers. For negative integers, a
+strategy called two's complement is used. For an 8-bit integer, this allows
+representation of integers from `-128` to `127`.
+
+### How non-integers are represented in Python
+
+Real numbers that are not integers are stored using the datatype `float`. Because
+memory is finite, not all real numbers can be represented exactly.
+
+**Remark R.70 (Sloppy description of 64-bit floating numbers)**  
+A 64-bit computer sets aside 64 bits to represent a real number of the form
+$\epsilon \cdot 10^\alpha$, where $\epsilon$ is (roughly) a 16-digit integer and
+the exponent $\alpha$ is roughly between `-340` and `+292`.
+
+**Example E.71**  
+Using the sloppy description, the number $\sqrt{2}$ is stored roughly as
+$$1.414213562373095 \cdot 10^0.$$
+
+**Exercise E.72**
+
+According to the sloppy definition:
+
+1. How far is it between the floating point representation of $\sqrt{2}$ and its
+   closest floating point neighbor?
+2. How far is it between $x=0$ and the next floating point number?
+
+**Exercise E.73**
+
+Put `a = 325660000`, `b = 0.000032566` and use Python to compute `100*(a+b)`,
+`1000*(a+b)`, and `10000*(a+b)`. How are the results stored? Are there any
+round-off errors?
+
+```{pyodide-python}
+#| read-only: false
+a = 325660000
+b = 0.000032566
+
+print(100 * (a + b))
+print(1000 * (a + b))
+print(10000 * (a + b))
+
+print("{:.20f}".format(a + b))
+```
+
+**Exercise E.74**
+
+Use the sloppy description of float numbers to do the following:
+
+1. Explain how large `N` has to be for the computer to think that
+   $1 + 2^{-N} = 1$.
+2. How large does `N` have to be for the computer to think that $2^{-N} = 0$?
+
+**Example E.75 (Binary notation for non-integers)**
+
+Binary notation for non-integers works like decimal notation. Compare:
+$$643.57_{10} = 6\cdot10^2 + 4\cdot10^1 + 3\cdot10^0 + 5\cdot10^{-1} + 7\cdot10^{-2}$$
+and
+$$101.01_2 = 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2}.$$
+
+**Exercise E.76**
+
+As a small taste of binary arithmetic, figure out both the decimal and binary
+representations of:
+
+1. $(101.01)_2 \cdot 2^2$
+2. $(101.01)_2 \cdot 2^1$
+3. $(101.01)_2 \cdot 2^{-1}$
+
+**Remark R.77 (Accurate description of 64-bit floating point numbers)**
+
+A 64-bit floating point number is stored in the form
+$$(1.\epsilon)_2 \cdot 2^\alpha,$$
+where $\epsilon$ is a string of 52 bits and the exponent $\alpha$ is an 11-bit
+integer. The remaining bit is used for the sign.
+
+When the exponent $\alpha$ is the smallest possible, $(1.\epsilon)_2$ is replaced by
+$(0.\epsilon)_2$ to offer additional accuracy close to the origin.
+
+::: {.callout-note}
+Figures omitted in this web version.
+:::
+
+**Example E.78**
+
+How do we store $1/10$ as a floating point number? The binary expansion of $1/10$
+is
+$$0.00011001100110011\ldots_2$$
+which is repeating. This means it cannot be stored exactly, so we must round.
+
+**Exercise E.79**
+
+Translate the accurate description of 64-bit floating point numbers to decimal
+notation to obtain the sloppy description above. Take into account the added accuracy
+close to the origin.
+
+**Exercise E.80 (Challenging)**
+
+Explain which fractions can be represented without round-off error as 64-bit floating
+point numbers.
+
+**Remark R.81 (The effect of round-off errors)**
+
+When using Python to compute and visualize data, we must consider whether results
+are real or caused by round-off error. This is especially important for functions
+with large or small scales.
+
+Appendix A: A crash course in Python  
+NUMA01: Computational Programming with Python  
+Malin Christersson, Robert Klofkorn  
+
+## A.6 Answers to selected exercises
+
+**E.4**
+
+- (a) addition
+- (b) subtraction
+- (c) multiplication
+- (d) power
+- (e) division
+- (f) floor division (division rounded down)
+- (g) modulo (remainder)
+
+**E.8**
+
+Codes (a), (d), and (f) will not run.
+
+**E.9**
+
+- (a) $1 + 1/2 + 1/4 + 1/8 + 1/16$
+- (b) $1/(1 + 1/(1 + 1/(1 + 1/(1 + 1))))$
+
+**E.11**
+
+The code in (a) will run.
+
+**E.36**
+
+The code computes the partial sum $S_{99999}$ of the harmonic series. The speed of
+the computations will depend on your processor.
+
+**E.40**
+
+Here is one solution:
+
+```{pyodide-python}
+#| read-only: false
+total = 0
+k = 0
+while abs(total - 2) >= 1 / 10000:
+    total = total + 1 / 2**k
+    k = k + 1  # In a while-loop, we must update k manually.
+
+print(k - 1)
+```
+
+**E.46**
+
+**(a)** Using a for-loop and break:
+
+```{pyodide-python}
+#| read-only: false
+my_list = [n / (1 + n**2) for n in range(0, 10**6)]
+k = 0
+for x in my_list:
+    if x < 1e-4:
+        break
+    k = k + 1
+
+print(k)
+```
+
+**(b)** Using a while-loop:
+
+```{pyodide-python}
+#| read-only: false
+my_list = [n / (1 + n**2) for n in range(0, 10**6)]
+k = 0
+while my_list[k] > 1e-4:
+    k = k + 1
+
+print(k)
+```
+
+**E.48**
+
+```{pyodide-python}
+#| read-only: false
+def absolute1(x):
+    if x >= 0:
+        return x
+    return -x
+
+def absolute2(x):
+    return (x**2) ** 0.5
+```
+
+**E.49**
+
+```{pyodide-python}
+#| read-only: false
+def product(x):
+    temp_prod = 1
+    for a in x:
+        temp_prod = temp_prod * a
+    return temp_prod
+```
+
+**E.54**
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+
+# Insert code for absolute1
+
+X = [k / 10 for k in range(-20, 21)]
+Y = [absolute1(x) for x in X]
+plt.plot(X, Y)
+plt.show()
+```
+
+**E.58**
+
+`absolute1` does not work for numpy arrays because the if-statement does not make
+sense for arrays. For `absolute2`, the following code works:
+
+```{pyodide-python}
+#| read-only: false
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Insert code for absolute2
+
+X = np.linspace(-2, 2, 40)
+Y = absolute2(X)
+plt.plot(X, Y)
+plt.show()
+```
+
+**E.63**
+
+Python crashes with a `ZeroDivisionError`. In other words, Python really believes
+that $S_{100} = 2$.
+
+**E.66**
+
+The first 21 numbers in both binary and decimal notation:
+
+| Decimal | Binary |
+|--------:|:------|
+| 0 | 0 |
+| 1 | 1 |
+| 2 | 10 |
+| 3 | 11 |
+| 4 | 100 |
+| 5 | 101 |
+| 6 | 110 |
+| 7 | 111 |
+| 8 | 1000 |
+| 9 | 1001 |
+| 10 | 1010 |
+| 11 | 1011 |
+| 12 | 1100 |
+| 13 | 1101 |
+| 14 | 1110 |
+| 15 | 1111 |
+| 16 | 10000 |
+| 17 | 10001 |
+| 18 | 10010 |
+| 19 | 10011 |
+| 20 | 10100 |
+
+**E.68**
+
+- (a) $2^7 - 1 = 127$
+- (b) $2^{63} - 1$
+
+**E.72**
+
+- (a) Roughly $10^{-16}$
+- (b) Roughly $10^{-340}$
+
+**E.73**
+
+According to the sloppy description, $a + b$ is stored as
+$3256600000000325 \cdot 10^{17}$. When printing `100*(a+b)`, `1000*(a+b)` and
+`10000*(a+b)`, the 17th digit keeps changing due to round-off errors.
+
+**E.74**
+
+- (a) $N = 53$
+- (b) $N = 1075$
+
+**E.76**
+
+- (a) $(10101)_2 = 21$
+- (b) $(1010.1)_2 = 10.5$
+- (c) $(10.101)_2 = 2.625$
+
+**E.79**
+
+The exponent $\alpha$ is between $-1024$ and $1023$ (counting two's complement). This
+means that $2^\alpha$ is between $10^{-308}$ and $10^{308}$, roughly. Taking into
+account that $\epsilon$ is between $1$ and $10^{16}$, and that $(1.\epsilon)_2$ is
+replaced by $(0.\epsilon)_2$ when $\alpha = -1024$, we obtain the rough description.
+
+**E.80**
+
+Exactly the fractions $a / 2^n$, where $a$ is an integer and $n$ is a natural number.
+These are the numbers with finite binary expansions.

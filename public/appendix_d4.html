@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.4 Functions – ConvertingAppendix</title>
+<title>Appendix A.4 Functions – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -477,27 +477,27 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d1.html"> 
-<span class="menu-text">D.1 Introduction</span></a>
+<span class="menu-text">A.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d2.html"> 
-<span class="menu-text">D.2 Sequences and Sums</span></a>
+<span class="menu-text">A.2 Sequences and Sums</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d3.html"> 
-<span class="menu-text">D.3 Control Statements</span></a>
+<span class="menu-text">A.3 Control Statements</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./appendix_d4.html" aria-current="page"> 
-<span class="menu-text">D.4 Functions</span></a>
+<span class="menu-text">A.4 Functions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d5.html"> 
-<span class="menu-text">D.5 Number Representation</span></a>
+<span class="menu-text">A.5 Number Representation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d6.html"> 
-<span class="menu-text">D.6 Answers</span></a>
+<span class="menu-text">A.6 Answers</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -519,17 +519,12 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.4-functions-in-python" id="toc-d.4-functions-in-python" class="nav-link active" data-scroll-target="#d.4-functions-in-python">D.4 Functions in Python</a>
+  <li><a href="#a.4-functions-in-python" id="toc-a.4-functions-in-python" class="nav-link active" data-scroll-target="#a.4-functions-in-python">A.4 Functions in Python</a>
   <ul class="collapse">
   <li><a href="#how-to-define-a-function-in-python" id="toc-how-to-define-a-function-in-python" class="nav-link" data-scroll-target="#how-to-define-a-function-in-python">How to define a function in Python</a></li>
-  <li><a href="#exercise-d.48" id="toc-exercise-d.48" class="nav-link" data-scroll-target="#exercise-d.48">Exercise D.48</a></li>
-  <li><a href="#exercise-d.49" id="toc-exercise-d.49" class="nav-link" data-scroll-target="#exercise-d.49">Exercise D.49</a></li>
   <li><a href="#warning-the-importance-of-local-namespaces" id="toc-warning-the-importance-of-local-namespaces" class="nav-link" data-scroll-target="#warning-the-importance-of-local-namespaces">Warning: the importance of local namespaces</a></li>
   <li><a href="#how-to-plot-functions-in-python-using-lists" id="toc-how-to-plot-functions-in-python-using-lists" class="nav-link" data-scroll-target="#how-to-plot-functions-in-python-using-lists">How to plot functions in Python using lists</a></li>
-  <li><a href="#exercise-d.54" id="toc-exercise-d.54" class="nav-link" data-scroll-target="#exercise-d.54">Exercise D.54</a></li>
-  <li><a href="#exercise-d.55" id="toc-exercise-d.55" class="nav-link" data-scroll-target="#exercise-d.55">Exercise D.55</a></li>
   <li><a href="#plotting-functions-using-numpy-arrays" id="toc-plotting-functions-using-numpy-arrays" class="nav-link" data-scroll-target="#plotting-functions-using-numpy-arrays">Plotting functions using numpy arrays</a></li>
-  <li><a href="#exercise-d.58" id="toc-exercise-d.58" class="nav-link" data-scroll-target="#exercise-d.58">Exercise D.58</a></li>
   <li><a href="#predefined-functions-in-python" id="toc-predefined-functions-in-python" class="nav-link" data-scroll-target="#predefined-functions-in-python">Predefined functions in Python</a></li>
   </ul></li>
   </ul>
@@ -550,7 +545,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.4 Functions</h1>
+<h1 class="title">Appendix A.4 Functions</h1>
 </div>
 
 
@@ -567,14 +562,14 @@ window.Quarto = {
 </header>
 
 
-<p>Appendix D: A crash course in Python<br>
+<p>Appendix A: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.4-functions-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="d.4-functions-in-python">D.4 Functions in Python</h2>
+<section id="a.4-functions-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="a.4-functions-in-python">A.4 Functions in Python</h2>
 <section id="how-to-define-a-function-in-python" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-define-a-function-in-python">How to define a function in Python</h3>
-<p><strong>Example D.47 (Defining functions in Python)</strong><br>
+<p><strong>Example E.47 (Defining functions in Python)</strong><br>
 In the following code we define <span class="math inline">\(f(x) = x^2 - 5x + 4\)</span> in Python and compute <span class="math inline">\(f(3)\)</span>.</p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -584,9 +579,8 @@ In the following code we define <span class="math inline">\(f(x) = x^2 - 5x + 4\
 <li>The <code>return</code> value is the output of the function.</li>
 <li>When we write <code>f(3)</code>, the function code is run with <code>x = 3</code>.</li>
 </ol>
-</section>
-<section id="exercise-d.48" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.48">Exercise D.48</h3>
+<section id="exercise-e.48" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.48">Exercise E.48</h4>
 <ol type="1">
 <li>Use the if-control statement to implement the absolute value function. Use it on a few values to check that it works.</li>
 <li>Implement the absolute value function without using the if-control statement.</li>
@@ -597,45 +591,45 @@ In the following code we define <span class="math inline">\(f(x) = x^2 - 5x + 4\
 <div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="exercise-d.49" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.49">Exercise D.49</h3>
+<section id="exercise-e.49" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.49">Exercise E.49</h4>
 <p>Write the code for a function that will take a list of numbers as input and return their product as output. This is analogous to the built-in function <code>sum()</code> which returns the sum.</p>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
+</section>
 <section id="warning-the-importance-of-local-namespaces" class="level3">
 <h3 class="anchored" data-anchor-id="warning-the-importance-of-local-namespaces">Warning: the importance of local namespaces</h3>
 <p>Variables created inside a function are local and cannot be accessed outside the function. This is a common source of bugs.</p>
-<p><strong>Example D.50</strong><br>
+<p><strong>Example E.50</strong><br>
 The following code makes no sense and will crash.</p>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Example D.51</strong><br>
+<p><strong>Example E.51</strong><br>
 The following code also crashes.</p>
 <div id="qpyodide-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The variable <code>y</code> only exists inside the function definition. After the function returns, local variables are deleted.</p>
-<p><strong>Example D.52</strong><br>
+<p><strong>Example E.52</strong><br>
 Thanks to local namespaces, we can be sure that the following code works:</p>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="how-to-plot-functions-in-python-using-lists" class="level3">
 <h3 class="anchored" data-anchor-id="how-to-plot-functions-in-python-using-lists">How to plot functions in Python using lists</h3>
-<p><strong>Example D.53 (Plotting with datatype list)</strong><br>
+<p><strong>Example E.53 (Plotting with datatype list)</strong><br>
 The following code plots <span class="math inline">\(f(x) = x^2 + 2x + 3\)</span> over the interval <span class="math inline">\([0, 1]\)</span>.</p>
 <div id="qpyodide-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>The command <code>plt.plot(X, Y)</code> connects the points with straight line segments. If you use <code>plt.plot(X, Y, "bo")</code> you will get blue dots instead of a line.</p>
-</section>
-<section id="exercise-d.54" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.54">Exercise D.54</h3>
-<p>Plot the functions you implemented in Exercise D.48 on <span class="math inline">\([1/2, 2]\)</span>.</p>
+<section id="exercise-e.54" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.54">Exercise E.54</h4>
+<p>Plot the functions you implemented in Exercise E.48 on <span class="math inline">\([1/2, 2]\)</span>.</p>
 <div id="qpyodide-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
-<section id="exercise-d.55" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.55">Exercise D.55</h3>
+<section id="exercise-e.55" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.55">Exercise E.55</h4>
 <p>Consider the following code:</p>
 <div id="qpyodide-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -645,10 +639,11 @@ The following code plots <span class="math inline">\(f(x) = x^2 + 2x + 3\)</span
 <li>Make the code easier to read by giving <code>a</code> different names where possible.</li>
 </ol>
 </section>
+</section>
 <section id="plotting-functions-using-numpy-arrays" class="level3">
 <h3 class="anchored" data-anchor-id="plotting-functions-using-numpy-arrays">Plotting functions using numpy arrays</h3>
 <p>Numpy arrays are like lists, but restricted to numeric entries. This makes it possible to do fast, element-wise operations.</p>
-<p><strong>Example D.56 (Features of numpy arrays)</strong></p>
+<p><strong>Example E.56 (Features of numpy arrays)</strong></p>
 <div id="qpyodide-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Notes:</p>
@@ -656,18 +651,18 @@ The following code plots <span class="math inline">\(f(x) = x^2 + 2x + 3\)</span
 <li><code>np.linspace(a, b, N)</code> creates <code>N</code> equally spaced points in <code>[a, b]</code>.</li>
 <li>Applying a function to an array is done element-wise.</li>
 </ul>
-<p><strong>Example D.57</strong><br>
-The following code gives exactly the same output as Example D.53.</p>
+<p><strong>Example E.57</strong><br>
+The following code gives exactly the same output as Example E.53.</p>
 <div id="qpyodide-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<section id="exercise-e.58" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.58">Exercise E.58</h4>
+<p>Try to use numpy arrays to plot the functions from Exercise E.48. For one of them, the code will not work. Can you imagine why?</p>
 </section>
-<section id="exercise-d.58" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.58">Exercise D.58</h3>
-<p>Try to use numpy arrays to plot the functions from Exercise D.48. For one of them, the code will not work. Can you imagine why?</p>
 </section>
 <section id="predefined-functions-in-python" class="level3">
 <h3 class="anchored" data-anchor-id="predefined-functions-in-python">Predefined functions in Python</h3>
-<p><strong>Remark D.59 (Built-in functions in Python)</strong><br>
+<p><strong>Remark R.59 (Built-in functions in Python)</strong><br>
 Here is a list of some functions that are built into Python:</p>
 <ul>
 <li><code>abs(x)</code> computes the absolute value of <code>x</code>.</li>
@@ -678,7 +673,7 @@ Here is a list of some functions that are built into Python:</p>
 <li><code>type(x)</code> returns the datatype of the variable <code>x</code>.</li>
 </ul>
 <p>For a full list, see <a href="https://docs.python.org/3/library/functions.html" class="uri">https://docs.python.org/3/library/functions.html</a>.</p>
-<p><strong>Remark D.60 (Functions in the numpy package)</strong><br>
+<p><strong>Remark R.60 (Functions in the numpy package)</strong><br>
 To use these functions, start your code with <code>import numpy as np</code>.</p>
 <ul>
 <li><code>np.exp(x)</code> exponential function</li>
@@ -707,7 +702,7 @@ To use these functions, start your code with <code>import numpy as np</code>.</p
 <li><code>np.e</code></li>
 </ul>
 <p>More info: <a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html" class="uri">https://docs.scipy.org/doc/numpy-1.13.0/reference/routines.math.html</a></p>
-<p><strong>Example D.61</strong></p>
+<p><strong>Example E.61</strong></p>
 <div id="qpyodide-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>There are other packages with even more functions, such as <code>math</code> and <code>scipy</code>. In particular, <code>numpy</code> makes the <code>math</code> package mostly obsolete when working with numpy arrays.</p>

@@ -1,20 +1,20 @@
 ---
-title: "Appendix D.5 Number Representation"
+title: "Appendix A.5 Number Representation"
 format: html
 filters:
   - pyodide
 ---
 
-Appendix D: A crash course in Python  
+Appendix A: A crash course in Python  
 NUMA01: Computational Programming with Python  
 Malin Christersson, Robert Klofkorn  
 
-## D.5 How numbers are represented in Python
+## A.5 How numbers are represented in Python
 
 We end this appendix by examining how numbers are represented in Python and some
 peculiar consequences of this.
 
-### Example D.62
+**Example E.62**
 
 At the start of Chapter 3, we considered the infinite series
 $$\sum_{k=0}^{\infty} \frac{1}{2^k} = 1 + \frac{1}{2} + \frac{1}{4} + \cdots.$$
@@ -31,7 +31,7 @@ for k in range(0, 101):
 print("S_100 =", S)
 ```
 
-### Exercise D.63
+**Exercise E.63**
 
 Does Python really mean that $S_{100} = 2$, or is there something else going on?
 One way to double check is to ask Python to compute $1 / (2 - S_{100})$.
@@ -61,7 +61,7 @@ use 64 bits for integers).
 Figures omitted in this web version.
 :::
 
-**Example D.65 (Decimal and binary notation)**  
+**Example E.65 (Decimal and binary notation)**  
 In decimal:
 $$4132 = 4\cdot10^3 + 1\cdot10^2 + 3\cdot10^1 + 2\cdot10^0.$$
 
@@ -75,18 +75,18 @@ Counting in binary:
 $(0)_2=0$, $(1)_2=1$, $(10)_2=2$, $(11)_2=3$, $(100)_2=4$, $(101)_2=5$,
 $(110)_2=6$, $(111)_2=7$, $(1000)_2=8$, and so on.
 
-### Exercise D.66
+**Exercise E.66**
 
 Check that the above list is correct, and continue the list to 20.
 
-### Exercise D.68
+**Exercise E.68**
 
 1. What is the largest integer you can represent as an 8-bit integer?
 2. Modern computers use 64-bit integers, where 1 bit is used for the sign and 63
    for the number itself. What is the largest integer you can represent using a
    64-bit integer?
 
-**Remark D.69 (Two's complement)**  
+**Remark R.69 (Two's complement)**  
 Our explanation above is correct for positive integers. For negative integers, a
 strategy called two's complement is used. For an 8-bit integer, this allows
 representation of integers from `-128` to `127`.
@@ -96,16 +96,16 @@ representation of integers from `-128` to `127`.
 Real numbers that are not integers are stored using the datatype `float`. Because
 memory is finite, not all real numbers can be represented exactly.
 
-**Remark D.70 (Sloppy description of 64-bit floating numbers)**  
+**Remark R.70 (Sloppy description of 64-bit floating numbers)**  
 A 64-bit computer sets aside 64 bits to represent a real number of the form
 $\epsilon \cdot 10^\alpha$, where $\epsilon$ is (roughly) a 16-digit integer and
 the exponent $\alpha$ is roughly between `-340` and `+292`.
 
-**Example D.71**  
+**Example E.71**  
 Using the sloppy description, the number $\sqrt{2}$ is stored roughly as
 $$1.414213562373095 \cdot 10^0.$$
 
-### Exercise D.72
+**Exercise E.72**
 
 According to the sloppy definition:
 
@@ -113,7 +113,7 @@ According to the sloppy definition:
    closest floating point neighbor?
 2. How far is it between $x=0$ and the next floating point number?
 
-### Exercise D.73
+**Exercise E.73**
 
 Put `a = 325660000`, `b = 0.000032566` and use Python to compute `100*(a+b)`,
 `1000*(a+b)`, and `10000*(a+b)`. How are the results stored? Are there any
@@ -131,7 +131,7 @@ print(10000 * (a + b))
 print("{:.20f}".format(a + b))
 ```
 
-### Exercise D.74
+**Exercise E.74**
 
 Use the sloppy description of float numbers to do the following:
 
@@ -139,14 +139,14 @@ Use the sloppy description of float numbers to do the following:
    $1 + 2^{-N} = 1$.
 2. How large does `N` have to be for the computer to think that $2^{-N} = 0$?
 
-### Example D.75 (Binary notation for non-integers)
+**Example E.75 (Binary notation for non-integers)**
 
 Binary notation for non-integers works like decimal notation. Compare:
 $$643.57_{10} = 6\cdot10^2 + 4\cdot10^1 + 3\cdot10^0 + 5\cdot10^{-1} + 7\cdot10^{-2}$$
 and
 $$101.01_2 = 1\cdot2^2 + 0\cdot2^1 + 1\cdot2^0 + 0\cdot2^{-1} + 1\cdot2^{-2}.$$
 
-### Exercise D.76
+**Exercise E.76**
 
 As a small taste of binary arithmetic, figure out both the decimal and binary
 representations of:
@@ -155,7 +155,7 @@ representations of:
 2. $(101.01)_2 \cdot 2^1$
 3. $(101.01)_2 \cdot 2^{-1}$
 
-### Remark D.77 (Accurate description of 64-bit floating point numbers)
+**Remark R.77 (Accurate description of 64-bit floating point numbers)**
 
 A 64-bit floating point number is stored in the form
 $$(1.\epsilon)_2 \cdot 2^\alpha,$$
@@ -169,25 +169,25 @@ $(0.\epsilon)_2$ to offer additional accuracy close to the origin.
 Figures omitted in this web version.
 :::
 
-### Example D.78
+**Example E.78**
 
 How do we store $1/10$ as a floating point number? The binary expansion of $1/10$
 is
 $$0.00011001100110011\ldots_2$$
 which is repeating. This means it cannot be stored exactly, so we must round.
 
-### Exercise D.79
+**Exercise E.79**
 
 Translate the accurate description of 64-bit floating point numbers to decimal
 notation to obtain the sloppy description above. Take into account the added accuracy
 close to the origin.
 
-### Exercise D.80 (Challenging)
+**Exercise E.80 (Challenging)**
 
 Explain which fractions can be represented without round-off error as 64-bit floating
 point numbers.
 
-### Remark D.81 (The effect of round-off errors)
+**Remark R.81 (The effect of round-off errors)**
 
 When using Python to compute and visualize data, we must consider whether results
 are real or caused by round-off error. This is especially important for functions

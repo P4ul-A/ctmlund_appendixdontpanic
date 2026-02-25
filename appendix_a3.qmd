@@ -1,15 +1,15 @@
 ---
-title: "Appendix D.3 Control Statements"
+title: "Appendix A.3 Control Statements"
 format: html
 filters:
   - pyodide
 ---
 
-Appendix D: A crash course in Python  
+Appendix A: A crash course in Python  
 NUMA01: Computational Programming with Python  
 Malin Christersson, Robert Klofkorn  
 
-## D.3 Some additional control statements in Python
+## A.3 Some additional control statements in Python
 
 ### While-loops
 
@@ -17,7 +17,7 @@ The while-loop is a close cousin of the for-loop. In most cases, what you can do
 one of them, you can also do with the other. The point is that in most situations,
 one of them will usually be much easier to use than the other.
 
-**Example D.38 (Partial sums with a while-loop)**  
+**Example E.38 (Partial sums with a while-loop)**  
 The following code computes the sum
 $$\sum_{n=1}^{10} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{10}.$$
 
@@ -38,11 +38,11 @@ Explanation:
 2. The loop continues while `n <= 10`.
 3. We must update `n` manually inside the loop.
 
-**Remark D.39 (Logical operators)**  
+**Remark R.39 (Logical operators)**  
 In the above example, we used `<=`. The logical operators `>=`, `==`, and `!=` are
 also useful. Note that `==` checks equality and `!=` checks inequality.
 
-### Exercise D.40
+**Exercise E.40**
 
 Use a while-loop to check how large `n` has to be for the partial sums
 $$S_n = \sum_{k=0}^n \frac{1}{2^k}$$
@@ -58,7 +58,7 @@ to be closer to `2` than `1/10000`.
 Alongside for- and while-loops, the if-else statement is the most important tool in
 programming.
 
-**Example D.41 (if-statements in Python)**
+**Example E.41 (if-statements in Python)**
 
 ```{pyodide-python}
 #| read-only: false
@@ -73,7 +73,7 @@ else:
 If you want to add more conditions, you can use `elif` and combine conditions using
 `and` or `or`.
 
-**Example D.42**
+**Example E.42**
 
 ```{pyodide-python}
 #| read-only: false
@@ -87,9 +87,9 @@ elif a <= -3:
     print("a is a BIG but negative number")
 ```
 
-### Exercise D.43
+**Exercise E.43**
 
-Use an if-type statement to modify the code from Example D.31 (Fibonacci numbers)
+Use an if-type statement to modify the code from Example E.31 (Fibonacci numbers)
 so that `1th`, `2th`, and `3th` are replaced by `1st`, `2nd`, and `3rd`.
 
 ```{pyodide-python}
@@ -102,8 +102,8 @@ so that `1th`, `2th`, and `3th` are replaced by `1st`, `2nd`, and `3rd`.
 The `break` command tells Python to stop the nearest loop and to continue the program
 on the first unindented line below it.
 
-**Example D.44**  
-The following code does exactly the same as the one in Example D.38.
+**Example E.44**  
+The following code does exactly the same as the one in Example E.38.
 
 ```{pyodide-python}
 #| read-only: false
@@ -116,10 +116,10 @@ for n in range(1, 1000):
 print(S)
 ```
 
-**Remark D.45**  
+**Remark R.45**  
 If you have nested loops, `break` only stops the inner-most loop.
 
-### Exercise D.46
+**Exercise E.46**
 
 Consider the list:
 

@@ -1,17 +1,17 @@
 ---
-title: "Appendix D.6 Answers"
+title: "Appendix A.6 Answers"
 format: html
 filters:
   - pyodide
 ---
 
-Appendix D: A crash course in Python  
+Appendix A: A crash course in Python  
 NUMA01: Computational Programming with Python  
 Malin Christersson, Robert Klofkorn  
 
-## D.6 Answers to selected exercises
+## A.6 Answers to selected exercises
 
-### D.4
+**E.4**
 
 - (a) addition
 - (b) subtraction
@@ -21,25 +21,25 @@ Malin Christersson, Robert Klofkorn
 - (f) floor division (division rounded down)
 - (g) modulo (remainder)
 
-### D.8
+**E.8**
 
 Codes (a), (d), and (f) will not run.
 
-### D.9
+**E.9**
 
 - (a) $1 + 1/2 + 1/4 + 1/8 + 1/16$
 - (b) $1/(1 + 1/(1 + 1/(1 + 1/(1 + 1))))$
 
-### D.11
+**E.11**
 
 The code in (a) will run.
 
-### D.36
+**E.36**
 
 The code computes the partial sum $S_{99999}$ of the harmonic series. The speed of
 the computations will depend on your processor.
 
-### D.40
+**E.40**
 
 Here is one solution:
 
@@ -54,7 +54,7 @@ while abs(total - 2) >= 1 / 10000:
 print(k - 1)
 ```
 
-### D.46
+**E.46**
 
 **(a)** Using a for-loop and break:
 
@@ -82,7 +82,7 @@ while my_list[k] > 1e-4:
 print(k)
 ```
 
-### D.48
+**E.48**
 
 ```{pyodide-python}
 #| read-only: false
@@ -95,7 +95,7 @@ def absolute2(x):
     return (x**2) ** 0.5
 ```
 
-### D.49
+**E.49**
 
 ```{pyodide-python}
 #| read-only: false
@@ -106,7 +106,7 @@ def product(x):
     return temp_prod
 ```
 
-### D.54
+**E.54**
 
 ```{pyodide-python}
 #| read-only: false
@@ -120,7 +120,7 @@ plt.plot(X, Y)
 plt.show()
 ```
 
-### D.58
+**E.58**
 
 `absolute1` does not work for numpy arrays because the if-statement does not make
 sense for arrays. For `absolute2`, the following code works:
@@ -138,12 +138,12 @@ plt.plot(X, Y)
 plt.show()
 ```
 
-### D.63
+**E.63**
 
 Python crashes with a `ZeroDivisionError`. In other words, Python really believes
 that $S_{100} = 2$.
 
-### D.66
+**E.66**
 
 The first 21 numbers in both binary and decimal notation:
 
@@ -171,41 +171,41 @@ The first 21 numbers in both binary and decimal notation:
 | 19 | 10011 |
 | 20 | 10100 |
 
-### D.68
+**E.68**
 
 - (a) $2^7 - 1 = 127$
 - (b) $2^{63} - 1$
 
-### D.72
+**E.72**
 
 - (a) Roughly $10^{-16}$
 - (b) Roughly $10^{-340}$
 
-### D.73
+**E.73**
 
 According to the sloppy description, $a + b$ is stored as
 $3256600000000325 \cdot 10^{17}$. When printing `100*(a+b)`, `1000*(a+b)` and
 `10000*(a+b)`, the 17th digit keeps changing due to round-off errors.
 
-### D.74
+**E.74**
 
 - (a) $N = 53$
 - (b) $N = 1075$
 
-### D.76
+**E.76**
 
 - (a) $(10101)_2 = 21$
 - (b) $(1010.1)_2 = 10.5$
 - (c) $(10.101)_2 = 2.625$
 
-### D.79
+**E.79**
 
 The exponent $\alpha$ is between $-1024$ and $1023$ (counting two's complement). This
 means that $2^\alpha$ is between $10^{-308}$ and $10^{308}$, roughly. Taking into
 account that $\epsilon$ is between $1$ and $10^{16}$, and that $(1.\epsilon)_2$ is
 replaced by $(0.\epsilon)_2$ when $\alpha = -1024$, we obtain the rough description.
 
-### D.80
+**E.80**
 
 Exactly the fractions $a / 2^n$, where $a$ is an integer and $n$ is a natural number.
 These are the numbers with finite binary expansions.

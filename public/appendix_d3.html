@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix D.3 Control Statements – ConvertingAppendix</title>
+<title>Appendix A.3 Control Statements – ConvertingAppendix</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -477,27 +477,27 @@ window.Quarto = {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d1.html"> 
-<span class="menu-text">D.1 Introduction</span></a>
+<span class="menu-text">A.1 Introduction</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d2.html"> 
-<span class="menu-text">D.2 Sequences and Sums</span></a>
+<span class="menu-text">A.2 Sequences and Sums</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./appendix_d3.html" aria-current="page"> 
-<span class="menu-text">D.3 Control Statements</span></a>
+<span class="menu-text">A.3 Control Statements</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d4.html"> 
-<span class="menu-text">D.4 Functions</span></a>
+<span class="menu-text">A.4 Functions</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d5.html"> 
-<span class="menu-text">D.5 Number Representation</span></a>
+<span class="menu-text">A.5 Number Representation</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./appendix_d6.html"> 
-<span class="menu-text">D.6 Answers</span></a>
+<span class="menu-text">A.6 Answers</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -519,14 +519,11 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#d.3-some-additional-control-statements-in-python" id="toc-d.3-some-additional-control-statements-in-python" class="nav-link active" data-scroll-target="#d.3-some-additional-control-statements-in-python">D.3 Some additional control statements in Python</a>
+  <li><a href="#a.3-some-additional-control-statements-in-python" id="toc-a.3-some-additional-control-statements-in-python" class="nav-link active" data-scroll-target="#a.3-some-additional-control-statements-in-python">A.3 Some additional control statements in Python</a>
   <ul class="collapse">
   <li><a href="#while-loops" id="toc-while-loops" class="nav-link" data-scroll-target="#while-loops">While-loops</a></li>
-  <li><a href="#exercise-d.40" id="toc-exercise-d.40" class="nav-link" data-scroll-target="#exercise-d.40">Exercise D.40</a></li>
   <li><a href="#if-else-statements" id="toc-if-else-statements" class="nav-link" data-scroll-target="#if-else-statements">If-else statements</a></li>
-  <li><a href="#exercise-d.43" id="toc-exercise-d.43" class="nav-link" data-scroll-target="#exercise-d.43">Exercise D.43</a></li>
   <li><a href="#the-break-command" id="toc-the-break-command" class="nav-link" data-scroll-target="#the-break-command">The break command</a></li>
-  <li><a href="#exercise-d.46" id="toc-exercise-d.46" class="nav-link" data-scroll-target="#exercise-d.46">Exercise D.46</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -546,7 +543,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Appendix D.3 Control Statements</h1>
+<h1 class="title">Appendix A.3 Control Statements</h1>
 </div>
 
 
@@ -563,15 +560,15 @@ window.Quarto = {
 </header>
 
 
-<p>Appendix D: A crash course in Python<br>
+<p>Appendix A: A crash course in Python<br>
 NUMA01: Computational Programming with Python<br>
 Malin Christersson, Robert Klofkorn</p>
-<section id="d.3-some-additional-control-statements-in-python" class="level2">
-<h2 class="anchored" data-anchor-id="d.3-some-additional-control-statements-in-python">D.3 Some additional control statements in Python</h2>
+<section id="a.3-some-additional-control-statements-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="a.3-some-additional-control-statements-in-python">A.3 Some additional control statements in Python</h2>
 <section id="while-loops" class="level3">
 <h3 class="anchored" data-anchor-id="while-loops">While-loops</h3>
 <p>The while-loop is a close cousin of the for-loop. In most cases, what you can do with one of them, you can also do with the other. The point is that in most situations, one of them will usually be much easier to use than the other.</p>
-<p><strong>Example D.38 (Partial sums with a while-loop)</strong><br>
+<p><strong>Example E.38 (Partial sums with a while-loop)</strong><br>
 The following code computes the sum <span class="math display">\[\sum_{n=1}^{10} \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{10}.\]</span></p>
 <div id="qpyodide-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -581,44 +578,43 @@ The following code computes the sum <span class="math display">\[\sum_{n=1}^{10}
 <li>The loop continues while <code>n &lt;= 10</code>.</li>
 <li>We must update <code>n</code> manually inside the loop.</li>
 </ol>
-<p><strong>Remark D.39 (Logical operators)</strong><br>
+<p><strong>Remark R.39 (Logical operators)</strong><br>
 In the above example, we used <code>&lt;=</code>. The logical operators <code>&gt;=</code>, <code>==</code>, and <code>!=</code> are also useful. Note that <code>==</code> checks equality and <code>!=</code> checks inequality.</p>
-</section>
-<section id="exercise-d.40" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.40">Exercise D.40</h3>
+<section id="exercise-e.40" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.40">Exercise E.40</h4>
 <p>Use a while-loop to check how large <code>n</code> has to be for the partial sums <span class="math display">\[S_n = \sum_{k=0}^n \frac{1}{2^k}\]</span> to be closer to <code>2</code> than <code>1/10000</code>.</p>
 <div id="qpyodide-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
+</section>
 <section id="if-else-statements" class="level3">
 <h3 class="anchored" data-anchor-id="if-else-statements">If-else statements</h3>
 <p>Alongside for- and while-loops, the if-else statement is the most important tool in programming.</p>
-<p><strong>Example D.41 (if-statements in Python)</strong></p>
+<p><strong>Example E.41 (if-statements in Python)</strong></p>
 <div id="qpyodide-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>If you want to add more conditions, you can use <code>elif</code> and combine conditions using <code>and</code> or <code>or</code>.</p>
-<p><strong>Example D.42</strong></p>
+<p><strong>Example E.42</strong></p>
 <div id="qpyodide-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-</section>
-<section id="exercise-d.43" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.43">Exercise D.43</h3>
-<p>Use an if-type statement to modify the code from Example D.31 (Fibonacci numbers) so that <code>1th</code>, <code>2th</code>, and <code>3th</code> are replaced by <code>1st</code>, <code>2nd</code>, and <code>3rd</code>.</p>
+<section id="exercise-e.43" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.43">Exercise E.43</h4>
+<p>Use an if-type statement to modify the code from Example E.31 (Fibonacci numbers) so that <code>1th</code>, <code>2th</code>, and <code>3th</code> are replaced by <code>1st</code>, <code>2nd</code>, and <code>3rd</code>.</p>
 <div id="qpyodide-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
 </section>
 <section id="the-break-command" class="level3">
 <h3 class="anchored" data-anchor-id="the-break-command">The break command</h3>
 <p>The <code>break</code> command tells Python to stop the nearest loop and to continue the program on the first unindented line below it.</p>
-<p><strong>Example D.44</strong><br>
-The following code does exactly the same as the one in Example D.38.</p>
+<p><strong>Example E.44</strong><br>
+The following code does exactly the same as the one in Example E.38.</p>
 <div id="qpyodide-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p><strong>Remark D.45</strong><br>
+<p><strong>Remark R.45</strong><br>
 If you have nested loops, <code>break</code> only stops the inner-most loop.</p>
-</section>
-<section id="exercise-d.46" class="level3">
-<h3 class="anchored" data-anchor-id="exercise-d.46">Exercise D.46</h3>
+<section id="exercise-e.46" class="level4">
+<h4 class="anchored" data-anchor-id="exercise-e.46">Exercise E.46</h4>
 <p>Consider the list:</p>
 <div id="qpyodide-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
@@ -632,6 +628,7 @@ If you have nested loops, <code>break</code> only stops the inner-most loop.</p>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 
+</section>
 </section>
 </section>
 
